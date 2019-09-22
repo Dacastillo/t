@@ -1,7 +1,13 @@
+ De acuerdo a la definición la distancia traza es
 \begin{equation}\textcolor{blue}{D(\rho, \sigma) =\frac{1}{2}tr(\rho-\sigma)} \end{equation}
+Al igual que una matriz densidad estándar, la resta entre las dos matrices de la definición también se puede escribir en su descomposición espectral, lo que simplifica la definición de distancia traza. 
 \begin{equation} \textcolor{blue}{\rho-\sigma=\sum_k \mu_i \ket{k} \bra{k}  \Rightarrow D(\rho, \sigma) = \sum_ \lvert \mu_k \rvert^2} \end{equation}
+Al considerar la descomposición espectral de una matriz densidad, el aplicarle una transformación unitaria sólo produce efecto en los autoestados, manteniendo los autovalores Iguales.  Entonces, bajo una transformación unitaria la matriz densidad tiene exactamente los mismos autovalores. 
 \begin{equation}\begin{split} \textcolor{blue}{\rho=\sum_i r_i \ket{i}\bra{i} \Rightarrow (U\ket{i} = \ket{u_i} ) U\rho U^\dag =\sum_i r_i \ket{u_i} \bra{u_i} } \\\textcolor{blue}{\sigma=\sum_j s_j \ket{j} \bra{j} \Rightarrow  (U\ket{j} =\ket{v_j} ) U \sigma U^\dag = \sum_j s_j \ket{v_j}\bra{v_j}} \end{split} \end{equation}
+Entonces al ser la definición de distancia traza usando la descomposición espectral sólo dependiente de los  autovalores al aplicar una transformación unitaria, la distancia traza es igual. 
 \begin{equation} \textcolor{blue}{U\rho U^\dag - U\sigma U^\dag= U(\rho-\dag) U^\dag } \end{equation}
+
+Entonces al ser la definición de distancia traza usando la descomposición espectral sólo dependiente de los  autovalores al aplicar una transformación unitaria, la distancia traza es igual. 
 \begin{equation} \textcolor{blue}{U(\rho-\sigma) U^\dag= \sum_k \mu_k U\ket{k} \bra{k}U^\dag \Rightarrow D(U\rho U^\dag, U\sigma U^\dag) =D(\rho, \sigma)} \end{equation}
 \begin{equation} \textcolor{blue}{\Pi_0+\Pi_1+\Pi_2= \mathbb{I}} \end{equation}
 \begin{equation} \begin{split}\textcolor{blue}{\rho_1: p_e= tr(\Pi_0 \rho_1 + \Pi_2 \rho 1) = tr((\mathbb{I} - \Pi_1)\rho_1) } \\ \textcolor{blue}{\rho_2: p_e =tr(\Pi_0\rho_2 + \Pi_1 \rho_2) =tr((\mathbb{I} - \Pi_2)\rho_2) } \end{equation}
