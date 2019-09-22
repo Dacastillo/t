@@ -4,19 +4,35 @@ Al igual que una matriz densidad estándar, la resta entre las dos matrices de l
 \begin{equation} \textcolor{blue}{\rho-\sigma=\sum_k \mu_i \ket{k} \bra{k}  \Rightarrow D(\rho, \sigma) = \sum_ \lvert \mu_k \rvert^2} \end{equation}
 Al considerar la descomposición espectral de una matriz densidad, el aplicarle una transformación unitaria sólo produce efecto en los autoestados, manteniendo los autovalores Iguales.  Entonces, bajo una transformación unitaria la matriz densidad tiene exactamente los mismos autovalores. 
 \begin{equation}\begin{split} \textcolor{blue}{\rho=\sum_i r_i \ket{i}\bra{i} \Rightarrow (U\ket{i} = \ket{u_i} ) U\rho U^\dag =\sum_i r_i \ket{u_i} \bra{u_i} } \\\textcolor{blue}{\sigma=\sum_j s_j \ket{j} \bra{j} \Rightarrow  (U\ket{j} =\ket{v_j} ) U \sigma U^\dag = \sum_j s_j \ket{v_j}\bra{v_j}} \end{split} \end{equation}
-Entonces al ser la definición de distancia traza usando la descomposición espectral sólo dependiente de los  autovalores al aplicar una transformación unitaria, la distancia traza es igual. 
+La suma de dos operaciones transformadas con la misma transformación equivale a hacer la transformación de la suma de los operadores sin la transformación
 \begin{equation} \textcolor{blue}{U\rho U^\dag - U\sigma U^\dag= U(\rho-\dag) U^\dag } \end{equation}
-
 Entonces al ser la definición de distancia traza usando la descomposición espectral sólo dependiente de los  autovalores al aplicar una transformación unitaria, la distancia traza es igual. 
+
+
 \begin{equation} \textcolor{blue}{U(\rho-\sigma) U^\dag= \sum_k \mu_k U\ket{k} \bra{k}U^\dag \Rightarrow D(U\rho U^\dag, U\sigma U^\dag) =D(\rho, \sigma)} \end{equation}
+
+
+La discriminación con mínimo error puede ser representada con un POVM cuyos operadores representan el proyector en el estado 1, el proyector en el estado 2 y lo que falta para obtener la identidad. (esto considerando la identidad como la suma de todos los proyectores en la base de un espacio aunque también puede ocurrir que los proyectores no sean ortogonales). 
 \begin{equation} \textcolor{blue}{\Pi_0+\Pi_1+\Pi_2= \mathbb{I}} \end{equation}
+Por lo tanto las probabilidades de error para ambos estados corresponderán a los casos en los que se tiene un estado pero se encuentra con el proyector del otro estado o con el proyector que lleva a que la máquina no entrega información. 
 \begin{equation} \begin{split}\textcolor{blue}{\rho_1: p_e= tr(\Pi_0 \rho_1 + \Pi_2 \rho 1) = tr((\mathbb{I} - \Pi_1)\rho_1) } \\ \textcolor{blue}{\rho_2: p_e =tr(\Pi_0\rho_2 + \Pi_1 \rho_2) =tr((\mathbb{I} - \Pi_2)\rho_2) } \end{equation}
+Considerando las probabilidades de preparación para los estados 1 y 2 se obtiene la probabilidad de error total
 \begin{equation} \textcolor{blue}{p_e= Tr((\eta_1+\eta_2)\mathbb{I}-(\eta_1\Pi_1\rho_1 +\eta_2\Pi_2\rho_2)) } \end{equation}
+Simplificando se obtiene que la probabilidad de discriminación con mínimo error se simplifica si se considera la distancia traza entre ambos estados. 
 \begin{equation} \textcolor{blue}{p_e=\frac{1}{2}(1-tr(\eta_2\rho_2-\eta_1\rho_2)} \end{equation}
+
+Considerando dos estados qubit arbitrarios
 \begin{equation} \begin{split} \textcolor{blue}{\ket{\phi_0}=a\ket{0}+b\ket{1} \Rightarrow \rho_0= \begin{pmatrix} \lvert a \rvert^2 & ab^* \\ ba^* & & \lvert b \rvert^2 \end{pmatrix} } \\ \textcolor{blue}{\ket{\phi_1}=c\ket{0}+d\ket{1} \Rightarrow \rho_1 =\begin{pmatrix} \lvert c \rvert^2 & cd^*\\ dc^* & & \lvert d \rvert^2 \end{pmatrix} } \end{split} \end{equation}
+Usando la definición del ejercicio anterior, se obtiene una probabilidad de discriminación con mínimo error que se hace cero cuando los estados son ortogonales (y por lo tanto se pueden discriminar de manera perfecta) y es máxima cuando hay un solo estado en ambos casos. 
 \begin{equation} \textcolor{blue}{\frac{1}{2}(1-tr(\begin{pmatrix}\eta_2 \lvert  c\rvert^2 - \eta_1 \lvert a \rvert^2 & \eta_2 cd^* - \eta_1 ab^*\\ \eta_2 dc^* - \eta_1 ba^*& \eta_2 \lvert d\rvert^2 - \eta _1 \lvert b \rvert^2 \end{pmatrix}))=\frac{1}{2}(1-\eta_2(a-b)-\eta_1(c-d))} \end{equation}
+
+Escribiendo un proyector horario de la forma entregada a otro estado unitario de la misma forma
 \begin{equation} \textcolor{blue}{\ket{\Phi}_{RA} \bra{\Phi}=\sum_{ij}^d (\mathbb{I} _R\otimes\sqrt{\rho}_A) \ket{i}_R\ket{i}_A \ket{j}_R \ket{j}_A (\mathbb{I}_R\otimes \sqrt{rho}_A) } \end{equation}
+Se escribe la operación traza en la misma base en la que se escribió la parte de la matriz densidad en R. 
 \begin{equation} \textcolor{blue}{Tr_R\ket{\Phi}_{RA} \bra{\Phi}=\sum_{ijk}^d \ket{k}_R (\mathbb{I} _R\otimes\sqrt{\rho}_A) \ket{i}_R\ket{i}_A \bra{j}_R \bra{j}_A (\mathbb{I}_R\otimes \sqrt{rho}_A)\ket{k} =\sum{ijk}^d \bra{k}\mathbb{I} \ket{i}_R\bra{j} \mathbb{I} \ket{k}_R} \end{equation}
+Sin  perder generalidad se asegura que se cumple ortonormalidad lo que convierte los productos  escalares en deltas que dejan solo una sumatoria
 \begin{equation} \textcolor{blue}{\bra{i} \ket{j} \Rightarrow Tr_R\ket{\Phi}_{RA} \bra{\Phi}_{RA}=\sum_i^d \sqrt{\rho}_A \ket{i}_A\bra{i} \sqrt{\rho}} \end{equation}
+Dado que la base cumple la función de completitud y la suma de todos los proyectores es la identidad se puede decir que. 
 \begin{equation} \textcolor{blue}{Tr_R\ket{\Phi}_{RA} \bra{\Phi}_{RA} =\sqrt{\rho_A} \sqrt{\rho_A} =\rho_A} \end{equation}
+Escribiendo las matrices densidad en sus respectivas descomposiciones espectrales
 \begin{equation} \textcolor{blue}{\sqrt{\rho} = \sum_i \sqrt{r_i} \ket{i} \bra{i}, \sqrt{\sigma} = \sum_j \sqrt{s_j} \ket{j} \bra{j}} \end{equation}
