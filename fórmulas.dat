@@ -1,0 +1,16 @@
+\begin{equation}\textcolor{blue}{D(\rho, \sigma) =\frac{1}{2}tr(\rho-\sigma)} \end{equation}
+\begin{equation} \textcolor{blue}{\rho-\sigma=\sum_k \mu_i \ket{k} \bra{k}  \Rightarrow D(\rho, \sigma) = \sum_ \lvert \mu_k \rvert^2} \end{equation}
+\begin{equation}\begin{split} \textcolor{blue}{\rho=\sum_i r_i \ket{i}\bra{i} \Rightarrow (U\ket{i} = \ket{u_i} ) U\rho U^\dag =\sum_i r_i \ket{u_i} \bra{u_i} } \\\textcolor{blue}{\sigma=\sum_j s_j \ket{j} \bra{j} \Rightarrow  (U\ket{j} =\ket{v_j} ) U \sigma U^\dag = \sum_j s_j \ket{v_j}\bra{v_j}} \end{split} \end{equation}
+\begin{equation} \textcolor{blue}{U\rho U^\dag - U\sigma U^\dag= U(\rho-\dag) U^\dag } \end{equation}
+\begin{equation} \textcolor{blue}{U(\rho-\sigma) U^\dag= \sum_k \mu_k U\ket{k} \bra{k}U^\dag \Rightarrow D(U\rho U^\dag, U\sigma U^\dag) =D(\rho, \sigma)} \end{equation}
+\begin{equation} \textcolor{blue}{\Pi_0+\Pi_1+\Pi_2= \mathbb{I}} \end{equation}
+\begin{equation} \begin{split}\textcolor{blue}{\rho_1: p_e= tr(\Pi_0 \rho_1 + \Pi_2 \rho 1) = tr((\mathbb{I} - \Pi_1)\rho_1) } \\ \textcolor{blue}{\rho_2: p_e =tr(\Pi_0\rho_2 + \Pi_1 \rho_2) =tr((\mathbb{I} - \Pi_2)\rho_2) } \end{equation}
+\begin{equation} \textcolor{blue}{p_e= Tr((\eta_1+\eta_2)\mathbb{I}-(\eta_1\Pi_1\rho_1 +\eta_2\Pi_2\rho_2)) } \end{equation}
+\begin{equation} \textcolor{blue}{p_e=\frac{1}{2}(1-tr(\eta_2\rho_2-\eta_1\rho_2)} \end{equation}
+\begin{equation} \begin{split} \textcolor{blue}{\ket{\phi_0}=a\ket{0}+b\ket{1} \Rightarrow \rho_0= \begin{pmatrix} \lvert a \rvert^2 & ab^* \\ ba^* & & \lvert b \rvert^2 \end{pmatrix} } \\ \textcolor{blue}{\ket{\phi_1}=c\ket{0}+d\ket{1} \Rightarrow \rho_1 =\begin{pmatrix} \lvert c \rvert^2 & cd^*\\ dc^* & & \lvert d \rvert^2 \end{pmatrix} } \end{split} \end{equation}
+\begin{equation} \textcolor{blue}{\frac{1}{2}(1-tr(\begin{pmatrix}\eta_2 \lvert  c\rvert^2 - \eta_1 \lvert a \rvert^2 & \eta_2 cd^* - \eta_1 ab^*\\ \eta_2 dc^* - \eta_1 ba^*& \eta_2 \lvert d\rvert^2 - \eta _1 \lvert b \rvert^2 \end{pmatrix}))=\frac{1}{2}(1-\eta_2(a-b)-\eta_1(c-d))} \end{equation}
+\begin{equation} \textcolor{blue}{\ket{\Phi}_{RA} \bra{\Phi}=\sum_{ij}^d (\mathbb{I} _R\otimes\sqrt{\rho}_A) \ket{i}_R\ket{i}_A \ket{j}_R \ket{j}_A (\mathbb{I}_R\otimes \sqrt{rho}_A) } \end{equation}
+\begin{equation} \textcolor{blue}{Tr_R\ket{\Phi}_{RA} \bra{\Phi}=\sum_{ijk}^d \ket{k}_R (\mathbb{I} _R\otimes\sqrt{\rho}_A) \ket{i}_R\ket{i}_A \bra{j}_R \bra{j}_A (\mathbb{I}_R\otimes \sqrt{rho}_A)\ket{k} =\sum{ijk}^d \bra{k}\mathbb{I} \ket{i}_R\bra{j} \mathbb{I} \ket{k}_R} \end{equation}
+\begin{equation} \textcolor{blue}{\bra{i} \ket{j} \Rightarrow Tr_R\ket{\Phi}_{RA} \bra{\Phi}_{RA}=\sum_i^d \sqrt{\rho}_A \ket{i}_A\bra{i} \sqrt{\rho}} \end{equation}
+\begin{equation} \textcolor{blue}{Tr_R\ket{\Phi}_{RA} \bra{\Phi}_{RA} =\sqrt{\rho_A} \sqrt{\rho_A} =\rho_A} \end{equation}
+\begin{equation} \textcolor{blue}{\sqrt{\rho} = \sum_i \sqrt{r_i} \ket{i} \bra{i}, \sqrt{\sigma} = \sum_j \sqrt{s_j} \ket{j} \bra{j}} \end{equation}
