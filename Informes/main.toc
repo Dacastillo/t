@@ -1,0 +1,17 @@
+\babel@toc {english}{}
+\contentsline {section}{\numberline {1}Preliminaries}{1}{section.1}
+\contentsline {subsection}{\numberline {1.1}2 Level System (with pulses)}{2}{subsection.1.1}
+\contentsline {subsubsection}{\numberline {1.1.1}Hamiltonian under unitary transformation}{2}{subsubsection.1.1.1}
+\contentsline {subsubsection}{\numberline {1.1.2}Time evolution for the excited state}{3}{subsubsection.1.1.2}
+\contentsline {subsubsection}{\numberline {1.1.3}Can the evolution to reach the ground state?}{4}{subsubsection.1.1.3}
+\contentsline {subsection}{\numberline {1.2}Time Evolution in Two Level System}{4}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Final State after Sequences}{6}{subsection.1.3}
+\contentsline {section}{\numberline {2}Central Spin and Random Fluctuating Field}{8}{section.2}
+\contentsline {subsection}{\numberline {2.1}Static Magnetic Field}{9}{subsection.2.1}
+\contentsline {subsubsection}{\numberline {2.1.1}State after Ramsey sequence}{9}{subsubsection.2.1.1}
+\contentsline {subsubsection}{\numberline {2.1.2}State after Echo sequence}{10}{subsubsection.2.1.2}
+\contentsline {subsection}{\numberline {2.2}Static and Random Magnetic Fields}{10}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Expectation Value of Random Function}{11}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}Spectral Densities for Different Noises}{11}{subsubsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.3}Ramsey sequence for noisey system}{11}{subsubsection.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.4}Echo sequence for noisey system}{11}{subsubsection.2.2.4}

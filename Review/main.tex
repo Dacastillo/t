@@ -1,0 +1,661 @@
+\documentclass[aps,rmp,reprint,longbibliography]{revtex4-1}
+\usepackage[spanish]{babel}
+\usepackage{amsmath,amsthm,amssymb,hyperref,braket, graphicx, appendix, empheq, inputenc, bm}
+\usepackage[caption=false]{subfig}
+\begin{document}
+\title{Espectroscopía Óptica Doble Resonante}
+\author{Daniel Castillo Castro}
+\affiliation{Centro de Óptica e Información Cuántica, Universidad Mayor, Camino la Pirámide 5750, Huechuraba, Santiago de Chile.}
+\date{\today{}}
+\begin{abstract}
+   En este informe se realiza una revisión bibliográfica sobre los fundamentos y el estado del arte de la espectroscopía óptica doble resonante. Esta técnica espectroscópica es llamada así porque utiliza 2 resonancias (1 óptica y 1 del espín electrónico o nuclear). Se introduce el formalismo por el cual se logra esta doble resonancia usando bombeo óptico de señales de microondas o de radiofrecuencia. Luego se estudia cómo esta técnica sirve para estudiar los niveles atómicos y subniveles magnéticos en defectos de sólidos cristalinos. Además se introduce la noción de sensibilidad de una medición, que es fundamental al diseñar experimentos realistas, además de mostrar ejemplos del uso de la técnica para centros de color.
+\end{abstract}
+\maketitle
+\tableofcontents{}
+\section{Bombeo Óptico y Técnicas de doble resonancia.}
+\subsection{Introducción}
+La siguiente sección está basada en el capítulo 5 de \cite{b2} y en literatura que ejemplifica su contenido.
+\begin{enumerate}
+\item El \textbf{Bombeo Óptico} es un cambio detectable de población de niveles de núcleos atómicos o moleculares respecto al equilibrio térmico por absorción o radiación de luz.
+\item El Bombeo existe desde antes de la aparición del laser, aunque su aparición ha permitido bombeos mucho más selectivos y efectivos y por consiguiente, mayores cambios de población.
+\item La \textbf{Doble Resonancia Óptica-Óptica} es el método de hacer resonar el haz de bombeo (a una frecuencia de transición dada) con una segunda onda electromagnética.
+\item La segunda onda puede tener frecuencia de microondas, de onda de radio o de Laser visible dependiendo del caso.
+\item La Doble Resonancia ya se ha usado antes de la invención del Laser para el estudio de transiciones atómicas, usando bombeo de átomos incoherentes y radiofrecuencia para evaluar transiciones de Zeeman.
+\item La aparición del Laser permitió que pudiese aumentar el número de casos en los que la técnica se puede ocupar.
+\end{enumerate}
+\subsection{Fundamentos}
+\subsubsection{Bombeo Óptico}
+\begin{enumerate}
+\item El efecto de un bombeo óptico en un sistema molecular depende de las propiedades del Laser de bombeo y del ancho de banda y probabilidad de transición. 
+\item Para poder bombear un nivel atómico o molecular se requiere que el Laser se emita en un rango de frecuencias de ancho cercano al producto escalar entre vector y velocidad de onda.
+\begin{equation}\label{eq1}\Delta\omega=\omega_0-\textbf{k}\cdot\textbf{v}=\omega_L\pm\frac{\Delta \omega_L}{2}\end{equation}
+\begin{itemize}
+    \item $\Delta\omega$: Ancho de Línea de Transición Molecular
+    \item $\omega_0$: Frecuencia del nivel a excitar
+    \item $\textbf{k}$: Vector de Onda 
+    \item $\textbf{v}$: Velocidad de Onda
+    \item $\omega_L$: Frecuencia promedio del Laser de bombeo
+    \item $\Delta\omega_L$: Ancho de banda del Laser del bombeo
+\end{itemize}
+\item Un aspecto del bombeo óptico a considerar es la variación de la población en niveles dados. 
+\item A suficientemente alta intensidad del Laser se puede saturar la transición molecular.
+\item Lo que se buscará será hallar dicha intensidad de saturación y qué tan fina o sensiblle puede ser la selectividad de estados a poblar.
+\item Se puede poblar un nivel usando bombeo de Laser y cumpliendo las reglas de selección, incluso con una intensidad débil, aprovechando que los Laser se pueden usar como aproximaciones a un número de onda único, de acuerdo a \ref{eq1}.
+\item Por lo general experimentalmente los estados moleculares $\ket{k}$ están escasamente poblados a equilibrio térmico. 
+\item En las redes cristalinas existen simetrías cristalográficas que pueden ser detectadas usando la técnica de bombeo ópticos, detectándolas a través de los espectros de fluorescencia.
+\item En otras palabras, \textbf{la selectividad del bombeo óptico depende del ancho de banda del Láser y de la densidad lineal del espectro de absorción}. 
+\item Si varias líneas de absorción se superponen con el perfil espectral del Láser, se puede bombear simultáneamente a más de un nivel, pudiendo poblarse todos ellos. 
+\item Pero si el láser es lo suficientemente delgado es capaz de poblar \textit{un solo nivel} (algo muy difícil y absolutamente necesario para caracterizar claramente dichos niveles).
+\item Para poder poblar con precisión un nivel $\ket{k}$ con una transición desde $\ket{i}$ se requieren teóricamente las siguientes condiciones:
+\begin{equation}\label{eq2}E_k-E_i=\hslash\omega_0\end{equation}
+\begin{itemize}
+    \item $E_k$: Energía del estado $\ket{k}$
+    \item $E_i$: Energía del estado $\ket{i}$
+\end{itemize}. 
+\begin{equation}\label{eq3}v_z=\frac{\omega-\omega_0\pm\gamma}{k}\end{equation}
+\begin{itemize}
+    \item $v_z$: Velocidad de grupo requerida para la molécula
+    \item $k$: Módulo del Vector de Onda
+    \item $\gamma$: Áncho de línea del Laser
+\end{itemize}
+\item Por lo tanto, la absorción de una banda delgada de Laser a estas moléculas excitadas lleva a una \textbf{señal de  doble resonancia sin Efecto Doppler}.
+\item ¿Qué ocurre si se pobla con un Laser un estado degenerado tipo $\ket{J,M}$ (Momento angular $J$ con degeneración $M$)?
+\item La densidad de población no uniforme $N(J,M)$ de un átomo o molécula depende de cierta orientación del sistema, aunque en equilibrio térmico tienden a poblarse con igual probabilidad.
+\item El Laser puede excitar y provocar absorción de fotones para un estado bien definido, pero al haber un estado degenerado en equilibrio térmico se poblan todos los estados posibles por igual.
+\item Eligiendo una polarización correcta del laser (alineada con la orientación), se pueden alcanzar poblaciones iguales para los respectivos estados $\ket{\pm M}$, lo que es llamado \textbf{alineamiento de la población}. 
+\item La orientación o alíneamiento se pueden producir poblando un estado superior o inferior con su respectiva transición de bombeo. 
+\item Si el ancho de banda del Laser es demasiado pequeño para resolver la estructura hiperfina, uno de los niveles degenerados al azar podría llenarse. 
+\item Por lo tanto, el ancho de banda del Laser es sumamente importante si se quiere poblar un estado bien especificado, sea degenerado o no.
+\item Para una transición $\ket{J_1,M_1}\rightarrow\ket{J_2,M_2}$, si no existe un campo magnético para cada $J$ posible hay $2J+1$ estados degenerados y sus números de fotones en equilibrio térmico son una suma equiprobable:
+\begin{equation}\label{eq4}n^0(J)=\sum_{M=-J}^J N^0(J,M) \Rightarrow N^0(J.M)=\frac{N(0)}{2J+1}\end{equation}
+\begin{itemize}
+    \item $n^0(J)$: Número de partículas para $J$ fijo
+    \item $J$: Momento angular
+    \item $N^0(J,M)$: Número de partículas para $J$ y $M$ fijos
+    \item $N(0)$: Valor constante de número de partículas para $J$ y $M$ fijo en equilibrio térmico.
+\end{itemize}
+\item La ecuación diferencial para el bombeo óptico es:
+\begin{equation}\label{eq5}\frac{dN_1}{dt}=\sum_{N_2}P_{12}(N_2-N_1)+\sum_{k}(R_{k1}N_k-R_{1k}N_1)\end{equation}
+\begin{itemize}
+    \item $P_{12}$: Probabilidad de transición de 1 a  2.
+    \item $R_{k1}$ y $R_{1k}$: Tasas de relajación en el nivel k
+\end{itemize}
+\item La probabilidad óptica de bombeo:
+\begin{equation}\label{eq6}P_{12}=\lvert\bra{J_1M_1}\textbf{D}\cdot\textbf{E}\ket{J_2M_2}\rvert^2\end{equation}
+\begin{itemize}
+    \item $P_{12}$: Probabilidad óptica de bombeo
+    \item $\ket{J_iM_i}$: Estado de números cuánticos $J_i$ y $M_i$
+    \item $\textbf{D}$: Momento de Transición Dipolar
+    \item $\textbf{E}$: Campo Eléctrico del Laser de Bombeo
+\end{itemize}
+\item Las moléculas que estén orientadas paralelamente al campo eléctrico tienen mayor probabilidad de transición. 
+\item Si el Laser es lo suficientemente intenso, la diferencia de población termina llegando a un \textbf{valor de saturación} $S$
+\begin{equation}\label{eq7}\Delta N^S=\frac{\Delta N^0}{1+S}\end{equation} 
+\begin{itemize}
+    \item $\Delta N^S$: Diferencia de población de Saturación 
+    \item $\Delta N^0$: Diferencia de población previa a la Saturación
+    \item $S$: Valor de Saturación 
+\end{itemize}
+\item $S$ y $P_{12}$ se hacen mayores cuando $\textbf{D}$ es paralelo a $\textbf{E}$
+\item La saturación se produce a menor intensidad si $\textbf{E}$ es perpendicular a $\textbf{D}$. 
+\item La saturación es inversamente proporcional a la orientación de la red.
+\item La \textbf{Sección transversal} del bombeo se puede ver como una tasa del entre probabilidad de transición y número de fotones: 
+\begin{equation}\label{eq8}P_{12}(N_2-N_1)=\sigma_{12}N_{ph}(N_2-N_1)\end{equation}
+\begin{itemize}
+    \item $\sigma_{12}$: Sección transversal.
+    \item $N_{ph}$: Número de fotones 
+\end{itemize}
+\item También se puede obtener $\sigma$ para estados degenerados.
+\begin{equation}\label{eq9}\sigma(J_1M_1,J_2M_2)=\sigma_{J_1J_2}C(J_1M_1,J_2M_2)\end{equation}
+\begin{itemize}
+    \item $\sigma(J_1M_1,J_2,M_2)$: Sección transversal para una transición entre estados con $J_1$, $M_1$, $J_2$ y $M_2$ fijos.
+    \item $\sigma_{J_1J_2}$:Sección Transversal de \ref{eq8} multiplicado por constantes
+    \item $C(J_1M_1,J_2M_2)$: Coeficientes Clebsch-Gordan para $J_1$, $M_1$, $J_2$ y $M_2$
+\end{itemize}
+\end{enumerate}
+\subsubsection{Producción de Doble Resonancia}
+\begin{enumerate}
+\item Las aplicaciones de la doble resonancia aumentan con la combinación de técnicas espectroscópicas de Laser con rayos moleculares y de radiofrecuencia.
+\item Aplicaciones: Medición de dipolos magnéticos o eléctricos, factores de Landé y separaciones hiperfinas en sistemas moleculares. 
+\item 2 niveles distintos $\ket{i}$ y $\ket{k}$ que están conectados por una transición óptica se pueden separar en subniveles $\ket{i_n}$ y $\ket{k_m}$, considerando ahora una transición entre $n$ y $m$ subniveles.
+\end{enumerate}
+\subsubsection{Doble Resonancia usando Microondas}
+\begin{enumerate}
+\item Aplicación: Medición de largos y ángulos de enlaces, configuraciones de equilibrio nuclear, separaciones fina e hiperfina e interacciones de partículas rotantes.
+\item El uso de microonda está limitado a transiciones entre niveles térmicamente poblados (generalmente entre estados fundamentales). 
+\item A temperatura ambiente la razón $\beta\hslash\omega$ es muy pequeña para frecuencias de microondas, por lo que la tasa de números de fotones en los 2 estados es
+\begin{equation}\label{eq10}\frac{N_k}{N_i}=\frac{g_k}{g_i}e^{-\beta\hslash\omega_{ik}}\end{equation}
+\begin{itemize}
+    \item $N_k$: Número de fotones en estado excitado (en adelante $\ket{k}$)
+    \item $N_i$: Número de fotones en estado fundamental (en adelante $\ket{i}$)
+    \item $g_k$: Degeneración del estado $\ket{k}$
+    \item $g_i$: Degeneración del estado $\ket{i}$
+    \item $\omega_{ik}$: Frecuencia de transición de $\ket{i}$ a $\ket{k}$
+\end{itemize}
+\item Por \ref{eq10}, se puede simplificar la diferencia de potencia producida por la microonda
+\begin{equation}\label{eq11}\begin{aligned}\Delta P=-P_0\sigma_{ik}[N_i-\frac{g_iN_k}{g_k}]\Delta x \\ \simeq -P_0 N_i\sigma_{ik}\Delta x\beta\hbar\omega_{ik}\end{aligned}\end{equation}
+\begin{itemize}
+    \item $\Delta P$: Diferencia de potencia
+    \item $P_0$: Presión inicial
+    \item $\sigma_{ik}$: Sección transversal de la transición de $\ket{i}$ a $\ket{k}$
+    \item $\Delta x$: Desplazamiento pequeño del haz de microondas
+\end{itemize}
+\item Como $\beta\hslash\omega_{ik} << 1$, la potencia es pequeña, porque la absorción inducida y la emisión cercana se balancea. 
+\end{enumerate}
+\subsubsection{Doble Resonancia usando Radiofrecuencia}
+\begin{enumerate}
+\item Si a una transición $\ket{i}\rightarrow \ket{k}$ se le hace  resonar con una radiofrecuencia La población de $\ket{k}$ luego de bajar vuelve a subir, produciendo un alza de la absorción del Laser de bombeo, lo que aumenta la \textbf{intensidad de fluorescencia}.
+\item $\omega_{rf}$ es una señal de doble resonancia, cuya frecuencia es proporcional a la diferencia de energía requerida para la transición:
+\begin{equation}\label{eq12}\omega_{rf}=\omega_{nj}=\frac{E(k)-E(i)}{\hslash}\end{equation}
+\begin{itemize}
+    \item $\omega_{rf}$: Frecuencia de la radiofrecuencia
+    \item $\omega_{nj}$: Frecuencia de la transición $\ket{i}\rightarrow\ket{k}$
+    \item $E(k)$: Energía de $\ket{k}$
+    \item $E(i)$: Energía de $\ket{i}$
+\end{itemize}
+\item Cada fotón de Radiofrecuencia absorbido lleva a un fotón óptico más absorbido desde el bombeo.
+\item Se observa como factor de amplificación el cociente entre las frecuencias entre ambos fotones:
+\begin{equation}\label{eq13}V=\frac{\omega_{opt}}{\omega_{rf}}\simeq\frac{3\cdot 10^{15} Hz}{10^7 Hz}=3\cdot 10^8\end{equation}
+\begin{itemize}
+    \item $V$: Factor de amplificación
+    \item $\omega_{opt}$: Frecuencia óptica obtenida
+    \item $\omega_{rf}$: Frecuencia de la radiofrecuencia
+\end{itemize}
+\item Al ser $V$ de 8 órdenes de magnitud, la doble resonancia se vuelve \textbf{detector de fotones muy sensible}.
+\item Como las transiciones de microondas bajan la población del nivel superior, la frecuencia de la transición tiene signo opuesto a encontrada en \ref{eq10}. \begin{equation}\label{eq14}\omega_2=\frac{E(i)-E(k)}{\hslash}=-\omega_1=-\omega_{inj}\end{equation}
+\begin{itemize}
+    \item $\omega_2$: Frecuencia de la transición de microondas
+    \item $\omega_1$: Frecuencia de señal de doble resonancia
+\end{itemize}
+\item Para ver efecto Zeeman se debe posicionar la muestra en el máximo de campo magnético de la radiofrecuencia. 
+\item Análogamente, si se quiere ver efecto Stark, debe ponerse en el máximo de campo eléctrico de la misma. 
+\item Esto será clave si se quiere, por ejemplo, separar estados degenerados.
+\item Usar un Laser como luz incidente para espectroscopía tiene como ventajas:
+\item 
+\begin{enumerate}
+    \item Se puede usar en toda clase de átomos o moléculas excitables por un Laser (no solo átomos con momento dipolar permanente.
+    \item Se pueden poblar y despoblar los estados sin importar la intensidad del Laser incidente aumentando la tasa de transición
+    \item La detección de las transiciones en radiofrecuencia es mucho más sensible que con un detector de ionización universal.
+    \item Se obtiene menos ruido en la señal que con otras técnicas por la selectividad de la excitación. 
+    \end{enumerate}
+\end{enumerate}
+\subsubsection{Doble Resonancia Óptica-Óptica}
+\begin{enumerate}\item
+La interacción simultánea de una molécula con 2 ondas ópticas, cada una ajustada a una transición molecular distinta, pero compartiendo un nivel común, pudiendo ser la transición hacia un nivel superior o inferior, define una doble resonancia \textbf{Óptica-Óptica}
+\item Existen 3 tipos de transiciones de este tipo:
+\item
+\begin{enumerate}
+    \item \textbf{Proceso tipo V}: Despoblar un nivel bajo $\ket{i}$ con los 2 haces hacia 2 niveles superiores $\ket{k_1}$ y $\ket{k_2}$. Observar los efectos en ambos niveles. 
+    \item \textbf{Excitación tipo $<$}: Excitar un nivel superior e inferior desde un nivel intermedio. Permitiendo el acceso a niveles superiores.
+    \item \textbf{Excitación tipo $\Lambda$}: Proceso de estimulación Raman resonante, donde se produce transferencia coherente del estado $\ket{1}$ a estados superiores $\ket{m}$.
+\end{enumerate}
+\end{enumerate}
+\section{Detección Óptica de Resonancia Paramagnética de Electrones}
+\subsection{Introducción}
+La siguiente sección está basada en el capítulo 4 de \cite{b1} como base teórica, y en diferentes papers que ejemplifican lo expuesto. 
+\begin{enumerate}
+\item Se puede detectar indirectamente una repoblación inducida por microondas de niveles paramagnéticos de Zeeman por un cambio en la polarización o la intensidad de la luz absorbida o emitida por este. 
+\item Ambas propiedades pueden cambiar por la existencia de la doble resonancia analizada en el capítulo anterior.
+\item Esto produce una medición de alta sensibilidad de defectos en sistemas cristalinos, que es útil para encontrar sus estructuras.
+\end{enumerate}
+\subsection{Fundamentos}
+\subsubsection{Estudio de defectos con alta selectividad}
+\begin{enumerate}
+\item Con detección óptica cada defecto se puede investigar separadamente, a menos que existan defectos con las mismas propiedades ópticas (poco común en la práctica, aunque se supone muchas veces en la teoría).
+\item Los subniveles magnéticos se pueden poblar selectivamente eligiendo condiciones experimentales o mecanismos físicos adecuados. 
+\item Básicamente se puede usar absorción óptica (vista anteriormente), fluorescencia o emisión de fosforescencia de un defecto.
+\item Como un ejemplo descriptivo, las absorciones y emisiones con anchos de $0,1-0,3 eV$ se pueden observar como \textbf{interacciones fonón-fonón} (uno del defecto y otro del cristal).
+\item La aparición de un defecto en un sistema cristalino produce evidentemente un cambio en las simetrías del sistema alrededor suyo.
+\item Algunas transiciones posibles: Absorción con \textbf{Shift de Stokes} (con su máximo a cierta distancia del máximo de emisión), Transiciones ionizantes (muy vistas en semiconductores) y \textbf{Recombinación de Luminiscencia} (Incidir con luz a la muestra, combinar las emisiones resultantes).
+\item Cualquiera de las 3 interacciones puede producir un electrón en una banda, y un hueco en la otra.
+\item Ambas pueden formar  estados ligados excitónicos, conocidos como  \textbf{Excitones} que pueden ser atrapados en impurezas o defectos y generan luminiscencias con una energía fotónica cerca de las bandas. 
+\end{enumerate}
+\subsubsection{Absorción y emisión de Excitones}
+\begin{enumerate}
+\item Si el excitón es atrapado en un \textbf{defecto paramagnético}, la emisión o absorción resonante puede usarse para detectar ópticamente las frecuencias de \textbf{espectro de EPR} del defecto.
+\item Habiendo un defecto pueden haber transiciones ópticas por fonones o transiciones de banda inalcanzables sin su presencia.
+\item Por lo tanto la emisión medida se obtiene luego de una fotoexcitación del defecto o de crear un par electrón-hueco con luz.
+\item En cristales iónicos y semiconductores, la mayoría  de los estados defectos son sensibles a la posición de iones y/o átomos.
+\item Considerando las \textbf{Coordenadas de Configuración}, los estados electrónicos se acoplan a las vibraciones de los átomos o espínes vecinos en la red, lo que se conoce como \textbf{Acoplamiento líneal}.
+\item El acoplamiento lineal puede representarse teóricamente usando que en $\ket{i}$ la energía del defecto se puede aproximar a la energía potencial elástica de un resorte
+\begin{equation}\label{eq15} E_i(Q)=\frac{\kappa Q^2}{2}\end{equation}
+\begin{itemize}
+    \item $E_g$: Energía en estado $\ket{i}$
+    \item $\kappa$: Constante de dimensionalidad
+    \item $Q$: Desplazamiento en la coordenada de configuración.
+\end{itemize}
+\item Entonces al pasar a $\ket{k}$ la energía es: 
+\begin{equation}\label{eq16} E_k(Q)=E_{ik}+\frac{\kappa Q^2}{2}-AQ=E_{ik}-\frac{A^2}{2\kappa}+\frac{\kappa}{2}(Q-\frac{A}{\kappa})\end{equation}
+\begin{itemize}
+    \item $E_{k}(Q)$: Energía del estado excitado
+    \item $E_{ik}$ Energía de interacción entre $\ket{i}$ y $\ket{k}$.
+    \item $\Delta Q$: Cambio pequeño en el desplazamiento
+    \item $A=\kappa\Delta Q$: Diferencia de acoplamiento entre electrón y red cristalina por $\Delta Q$
+    
+\end{itemize}
+\item La diferencia de acoplamiento entre los niveles también se puede describir usando el \textbf{Parámetro adimensional Huang-Rhys}:
+\begin{equation}\label{eq17} S=\frac{A^2}{2\kappa}\frac{1}{\hslash\omega}=\frac{\kappa\Delta Q^2}{2\hbar\omega}\end{equation}
+\begin{itemize}
+    \item $S$: Parámetro Huang-Rhys
+    \item $\omega$: Frecuencia de fotón emitido. 
+\end{itemize}
+\item Para este modelo los estados vibracionales tienen una energía de $(n+\frac{1}{2})\hslash\omega$.
+\item En este modelo $\omega_e=\omega_g$, lo que por lo general no es cierto, pero sirve como primera aproximación al problema.
+\item Por lo tanto se puede decir que la función de onda del estado vibracional depende de las coordenadas electrónicas (\textbf{$r$}) y nucleares (\textbf{$Q$}).
+\item El factor Huang-Rhys también se puede definir considerando la energía entre niveles
+\begin{equation}\label{eq18}\hslash \omega_{mn}=E_{ge}-\frac{A^2}{2\kappa}+(m-n)\hslash\omega \end{equation}
+\begin{itemize}
+    \item $m$: Número de fotones en $\ket{k}$
+    \item $n$: Número de fotones en $\ket{i}$
+    \item $\hslash\omega_{mn}$: Energía entre niveles dependiente de $n$ y $m$.  
+\end{itemize}
+ 
+\item Si $n=0$ y $m\neq 0$ es una \textbf{Absorción} y si en cambio $n\neq 0$ y $m=0$ es una \textbf{emisión}.
+\end{enumerate}
+\subsubsection{Aproximación Franck-Condon}
+\begin{enumerate}
+\item Para la relación entre interferencia y número de estados excitados se obtiene una \textbf{distribución de Poisson}.
+\begin{equation}\label{eq19}P_{m0}\propto
+\lvert\bra{k,m}\ket{i,0}\rvert^2=\frac{e^{-S}S^m}{m!}\end{equation}
+\begin{itemize}
+    \item $P_{m0}$: Probabilidad de $m$ fotones excitados
+    \item $\ket{k,m}$: Estado producto de $\ket{k}$ y $m$ fotones
+    \item $\ket{i,0}$: Estado producto de $\ket{i}$ y $0$ fotones 
+    \item $S$: Factor de Huang-Rhys
+\end{itemize}
+\item A temperaturas finitas, los estados cuánticos de mayores vibraciones ocupan la parábola de $\ket{i}$ de acuerdo a estadísticas de Boltzmann. 
+\item El llamado \textbf{\textit{Zero Phonon Line} (ZPL)} (diferencia entre energías de $\ket{k,0}$ y $\ket{i,0}$) decrece a $e^{-S(2n+1)}$, obteniéndose finalmente una distribución de Bose Einstein que hace variar el ancho de línea.
+\begin{equation}\label{eq20}W(T)^2=W(0)^2coth(\beta\hbar\omega)\end{equation}
+\begin{itemize}
+    \item $W(T)$: Ancho de Línea a Temperatura T
+    \item $W(0)$: Ancho de Línea a Temperatura 0
+    \item $\beta=(k_BT)^{-1}$
+\end{itemize}
+Obteniéndose de esta forma los \textbf{Espectros de Absorción y de Emisión}
+\end{enumerate}
+\subsubsection{EPR detectada con Dicroísmo Magnético Circular de Método de Absorción}
+\begin{enumerate}
+\item El \textbf{Dicroísmo} se define como el acto de dividir ópticamente un haz en 2 (o más) haces de distinta longitud de onda.
+\item El \textbf{Dicroísmo magnético circular de la absorción} (\textbf{MCDA}). es la aplicación del dicroísmo en luz de microondas para medir EPR de $\ket{i}$ a través de su cambio en longitud de onda.
+\item El MCDA es útil para medir EPR en centros de color experimentalmente. 
+\item Se busca la resonancia con el fin de determinar estructura de defectos en semiconductores. 
+\item El Dicroísmo Magnético se debe a la absorción de luz polarizada a izquierda y derecha, obteniéndose Efecto Zeeman para ambas absorciones.
+\item El efecto del MCDA se evalúa a través de la \textbf{variable $\epsilon$}
+\begin{equation}\label{eq21}\epsilon=\frac{\omega d}{2c}(k_r-k_l)\end{equation}
+\begin{itemize}
+    \item $\epsilon$: Variable de MCDA
+    \item $\omega$: Frecuencia de fotón emitido
+    \item $d$: Ancho del cristal 
+    \item $c$: Velocidad de la luz
+    \item $k_r$: Módulo de vector de onda a polarización derecha
+    \item $k_l$: Módulo de vector de onda a polarización izquierda
+\end{itemize}
+\item Se puede redefinir la constante $\epsilon$ de manera que se puede obtener de la intensidad (variable medible experimentalmente):
+\begin{equation}\label{eq22}(k(E)=\frac{\hslash c}{2 \epsilon} \alpha(E))\Rightarrow \epsilon =\frac{d}{4}(\alpha_r-\alpha_l)\end{equation}
+\begin{itemize}
+    \item $k(E)$: Módulo de vector de onda dependiente del Campo magnético
+    \item $\alpha(E)$: Factor Dieléctrico dependiente del campo eléctrico. 
+    \item $\alpha_r$: Factor dieléctrico para el Campo Polarizado a la derecha
+    \item $\alpha_l$: Factor dieléctrico para el Campo Polarizado a la izquierda
+\end{itemize}
+
+\item La intensidad producto del dicroísmo decae respecto al campo y al ancho del cristal.
+\begin{equation}\label{eq23}I_{r,l}=I_0 e^{-\alpha_{r,l}\cdot d} \end{equation}
+\begin{itemize}
+    \item $I_{r,l}$: Intensidad resultante luego de la MCDA 
+    \item $I_0$: Intensidad de la luz incidente a la muestra
+\end{itemize}
+\item Entonces el factor $\alpha$ se puede definir como dependiente solo de valores medibles:
+\begin{equation}\label{eq24}\alpha_{r,l}=\frac{1}{d}ln(\frac{I_0}{I_{r,l}})\end{equation}
+\begin{itemize}
+    \item $\alpha_{r,l}$: Factor dieléctrico luego de la MCDA
+    \item $d$: Ancho del cristal
+\end{itemize}
+\item Definiéndose la \textbf{Intensidad Promedio} $I_0$
+\begin{equation}\label{eq25}I_0=\frac{I_r+I_l}{2}\end{equation}
+Y también la \textbf{Diferencia de Intensidad} $\Delta I$
+\begin{equation}\label{eq26}\Delta I=I_l-I_r\end{equation}
+\begin{itemize}
+    \item $I_r$: Intensidad del haz polarizado derecho
+    \item $I_l$: Intensidad del haz polarizado izquierdo
+\end{itemize}
+Se obtiene una definición de $\epsilon$ solo dependiente de las intensidades.
+\begin{equation}\label{eq27} \epsilon \simeq \frac{\Delta I}{4 I_0}\end{equation}
+\item Por lo tanto $\epsilon$ se puede obtener con un modulador de tensión y Técnicas Lock-In.
+\end{enumerate}
+\subsubsection{Reglas de Selección para transiciones dipolares con polarización circular}
+\begin{enumerate}
+\item El factor $\epsilon$ es un número complejo que se puede dividir en sus partes real e imaginaria:
+\begin{equation}\label{eq28} \epsilon=\epsilon_P(P)+i\epsilon_d(B_0)\end{equation}
+\begin{itemize}
+    \item $P$: Polarización
+    \item $B_0$: Campo magnetico inicial
+    \item $\epsilon_P(P)$: Parte Paramagnética, dependiente de la polarización de spin.
+    \item $\epsilon_d(B_0)$: Parte de Efecto Zeeman, dependiente de $B_0$
+\end{itemize}
+\item Para el ejemplo de espín $\frac{1}{2}$, la parte paramagnética es proporcional a la Polarización, que sigue la estadística de Bose-Einstein
+\begin{equation}\label{eq29}\epsilon_P(P)\propto P=\frac{n_{-\frac{1}{2}}-n_{\frac{1}{2}}}{n_{-\frac{1}{2}}+n_{\frac{1}{2}}}=tanh(\frac{Bg_e\mu_BB_0}{2})\end{equation}
+\begin{itemize}
+    \item $P$: Polarización
+    \item $n_{\frac{-1}{2}}$: Número de partículas de espín $\frac{-1}{2}$
+    \item $n_{\frac{1}{2}}$: Número de partículas de espín $\frac{-1}{2}$
+    \item $B$: Campo Magnético Externo
+\end{itemize}
+\item Para un sistema de 2 niveles se puede definir  una parte paramagnética más general, proporcional a \ref{eq30}
+\begin{equation}\label{eq30} \alpha_0(E_0)d\cdot(\frac{G_r(E)-G_l(E)}{G_r(E+G_l(E)})(\frac{n_{-\frac{1}{2}}-n_{\frac{1}{2}}}{n_{-\frac{1}{2}}+n_{\frac{1}{2}}})\end{equation}
+\begin{itemize}
+    \item $\alpha_0(E_0)$: factor dieléctrico para el campo inicial
+    \item $G_r(E)$: Función de Correlación para el campo polarizado derecho 
+    \item $G_l(E)$: Función de Correlación para el campo polarizado izquierdo
+\end{itemize}
+\item El segundo factor es la sección transversal de probabilidad de transición. 
+\item El experimento mencionado es altamente sensible comparado con EPR convencional y espectroscopía de absorción. 
+\item Con el EPR ópticamente detectado se puede hallar una correlación directa entre el espectro de absorción y el espectro de EPR de un defecto.
+\end{enumerate}
+\section{Sensibilidad en Sistemas de Doble Resonancia}
+Esta sección es para detallar el concepto de \textbf{Sensibilidad} de una medición de doble resonancia está basada en \cite{b2} como base, además de referencias como ejemplo.
+
+\subsection{Detección de estados fundamental y excitado con Bombeo Óptico} 
+\begin{enumerate}\item La resonancia paramagnética detectada ópticamente también se puede medir detectando los cambios de la emisión óptica, cuya escala es a nivel de microondas.
+\item Los métodos que se mencionarán no son útiles en semiconductores a menos que los estados excitados de los defectos estén entre las bandas y exista un ciclo de bombeo cerrado. 
+\item Si los ciclos son resonantes en las bandas, o si hay solo transiciones ionizantes, se produce una pérdida completa de la \textbf{Memoria de espín} (conexión entre la magnetización de $\ket{i}$  en equilibrio térmico y la magnetización en otro estado al que se por el bombeo) porque los electrones y huecos se termalizan allí. 
+\item En principio se puede revertir el sentido de las transiciones ópticas típicas de un esquema de espectroscopía de doble resonancia de la absorción a la emisión. 
+\item Los estados iniciales entonces serían los estados excitados y relajados, mientras que los finales serían los fundamentales y no relajados. 
+\item En lugar de medir el dicroísmo magnético circular de la absorción se mide la llamada \textbf{Polarización Magnética Circular de la Emisión (MCPE)}.
+\item La condición para ver una resonancia en el $\ket{k}$ sería que los subniveles magnéticos se ocupan diferentemente. 
+\item Las microondas cambiarían entonces la distribución de estas ocupaciones, haciéndolo durante el tiempo de vida radiativo de los estados excitados. 
+\item Con una transición de microondas lo suficientemente rápida, se pueden lograr cambios de ocupación dentro del tiempo radiativo.
+\item Es posible también llenar selectivamente subniveles magnéticos como resultado de la existencia de diferentes probabilidades radiativas para los distintos subniveles. 
+\item Por lo tanto, se puede lograr poblado selectivo usando bombeo óptico y efectos de la memoria de espín. 
+\item El ciclo requerido de bombeo consiste en 4 procesos consecutivos:
+\begin{enumerate}
+    \item \textbf{Absorción}: Entendida como transición dentro de los estados excitados no relajados.
+    \item \textbf{Transición no Radiativa}: Desde los estados excitados no relajados hasta los estados excitados relajados.
+    \item \textbf{Transición Radiativa (Emisión)}: Desde los estados excitados relajados a los estados fundamentales no relajados.
+    \item \textbf{Transición no Radiativa}: Desde los estados fundamentales no relajados al $\ket{i}$ relajado (\textbf{Dobletes de Kramers}).
+\end{enumerate}
+\item La polarización del espín del $\ket{i}$ se puede cambiar cambiando el ciclo de bombeo óptico, si se considera una memoria de espín no perfecta. 
+\item Se dice que la memoria de espín es \textbf{positva} si la magnetización del $\ket{i}$ mantiene su signo luego del bombeo. 
+\item La memoria en tanto es \textbf{negativa} si el bombeo cambia el signo de dicha magnetización.
+\item Se puede aplicar lo aprendido sobre efectos de espín en bombeo óptico para observar EPR Óptico Doble de los estados fundamental y excitado de un defecto. 
+\item Se puede observar dicho EPR entonces o con \textbf{MCDA} (Dicroísmo de Absorción) o com \textbf{MCPE} (Polarización de Emisión). 
+\item Dicho esto, se puede interpretar el parámetro $\epsilon$ del MCDA antes estudiado como un \textbf{Parámetro de mezcla de espín}, el que puede describir la pérdida de memoria de espín al relajar $\ket{k}$ con una transición no radiativa. \item Si $\epsilon=0$ es una memoria de espín perfecto. Si $\epsilon=1$ es una memoria de espín perfecta negativa. Si $\epsilon=0.5$ significa una pérdida total en la memoria de espín.
+\item La polarización del $\ket{i}$, considerando un spin $\frac{1}{2}$, sigue estadística de Bose-Einstein (similar a \ref{eq29}):
+\begin{equation}\label{eq31} P_i=\frac{n_{\frac{1}{2}}-n_{\frac{-1}{2}}}{n_{\frac{1}{2}}+n_{\frac{-1}{2}}}=\frac{P_{es}-\frac{T_p}{T_1}tanh(\frac{\beta g \mu_B B_0}{2})}{1+\frac{T_p}{T_1}}\end{equation}
+\begin{itemize}
+    \item $P_i$: Polarización del estado $\ket{i}$
+    \item $P_{es}$: Polarización de Saturación
+    \item $T_i$: Tiempo inicial
+    \item $T_p$: Tiempo de polarización
+\end{itemize}
+\item La polarización de saturación y el Tiempo de polarización se definen como:
+\begin{equation}\label{eq32}P_{es}=\frac{u^--u^+}{u^-+u^+}, T_p^{-1}=\epsilon(u^++u^-)\end{equation}
+\begin{itemize}
+    \item $u^+$: Operador de subida del campo incidente
+    \item $u^-$: Operador de bajada del campo incidente
+    \item $\epsilon$: Parámetro de mezcla de espín
+\end{itemize}
+\item Por lo visto en \ref{eq32}, la polarización del $\ket{i}$ puede influenciarse por el bombeo óptico. 
+\item Reemplazando en \ref{eq32}, si $\epsilon=0$, $T_p$ se hace infinito y $P_g$ se lleva al valor en equiilibrio. En cambio si $\epsilon = 1 $ no existe realmente bombeo.
+\item La polarización de $\ket{k}$ para una polarización fija lineal o circular de la luz de bombeo, depende de asumir que $T_1^*$ es grande comparado con el tiempo de vida radiativa (muy común en experimentos). 
+\item Allí la polarización del $\ket{k}$ es de la misma forma de \ref{eq31}
+\begin{equation}\label{eq33}P_{k}=\frac{n^*_{\frac{1}{2}}-n^*_{\frac{-1}{2}}}{n^*_{\frac{1}{2}}+n^*_{\frac{-1}{2}}}\end{equation}
+\begin{itemize}
+    \item $P_k$: Polarización del estado $\ket{k}$
+    \item $n_{\frac{-1}{2}}^*$: Número de part. excitadas de espín $\frac{-1}{2}$
+    \item $n_{\frac{1}{2}}^*$: Número de part. excitadas de espín $\frac{-1}{2}$
+\end{itemize}
+
+\item Y usando lo derivado en \ref{eq31}, la siguiente expresión general $P_k$ $u^\pm=u^++u^-$ y $u^\mp=u^+-u^-$
+\begin{equation}\label{eq34}P_k=\frac{(1-2\epsilon)(-u^\mp+u^\pm tanh(\frac{\beta g \mu_BB_0}{2}))}{(u^\pm+u^\mp tanh(\frac{tanh(\beta g \mu_B B_0)}{2}))+4\epsilon u^+u^-T_1}\end{equation}
+\begin{itemize}
+    \item $\epsilon$: Parámetro de MCDA-Mezcla de spin
+    \item $u^\pm=u^++u^-$
+    \item $u^\mp=u^+-u^-$
+    \item $T_1$: Tiempo de polarización 
+\end{itemize}
+\item 2 casos partículares para \ref{eq34}
+\begin{enumerate}
+    \item Bombeo débil con luz sin polarizar ($u^+=u^+=\frac{u}{2}$.
+    \begin{equation}\label{eq35}P_e=\frac{1-2\epsilon}{1+\epsilon uT_1}tanh(\frac{\beta g_e\mu_BB_0}{2})\end{equation}
+    \item Bombeo débil con $\epsilon u T_1<< 1$, lo que lleva a una relajación rápida en el $\ket{k}$.
+    \begin{equation}\label{eq36}(1-2\epsilon)tanh(\frac{\beta g_e\mu_BB_0}{2})\end{equation}
+\end{enumerate}
+\item Se pueden usar los efectos del bombeo óptico para medir EPR del estado relajado excitado. 
+\item Un método posible es el uso de MCDA con $P_k$ definida en \ref{eq33} y \ref{eq34}, evaluando la transición de microondas entre los niveles de Zeeman de $\ket{k}$
+\item El otro método posible es medir los cambios en $P_i$ inducidos por los cambios en el bombeo óptico y $\epsilon$. 
+\end{enumerate}
+\subsection{Detección de EPR en Luminiscencia de recombinación}
+\begin{enumerate}
+\item La luminiscencia de recombinación ocurre en un \textbf{par donador-aceptador} de una red cristalina. 
+\item Los \textbf{Donadores $D^0$} se pueden describir con espín $\frac{1}{2}$ 
+\item Los \textbf{Aceptadores $A^0$} con un momento angular que depende de la posicion de energía relativa a la banda de valencia. Por lo que se puede modelar con un espín $\frac{1}{2}$ o superior.
+\item Para que se observe luminiscencia de recombinación, $D^0$ y $A^0$ deben estar al menos acoplados mínimamente con una superposición mínima de sus respectivas funciones de onda. 
+\item Para acoplamiento débil, los niveles de energía de $D^0$ y $A^0$ se determinan solo por sus factores de acoplamiento $g$ y el campo magnético.
+\item Por las distintas probabilidades de l transición radiativa dentro del \textbf{singlete} se observan diferencias de población en los subniveles magnéticos.
+\item La probabilidad de transición para las 2 configuraciones de \textbf{tripletes puros} al estado \textbf{singlete fundamental} es baja comparada con la ocurrida entre los $D^0$ y $A^0$, antiparalelos y combinaciones lineales de singletes y tripletes. 
+\item Induciendo transiciones EPR entre $D^0$ y $A^0$ se puede reducir la sobrepoblación en los \textbf{estados tripletes puros}, aumentando la luminiscencia de recombinación fuera de los \textbf{estados singlete}. 
+\item Por lo tanto, es suficiente monitorear el cambio de dicha luminiscencia para detectar el EPR.
+\item Si los factores $g$ son lo suficientemente diferentes para $D^0$ y el $A^0$, se pueden ver las líneas de EPR para ambos estados, aunque por lo general solo se observa la linea de $D^0$ dado que los huecos presentes en $A^0$ tienden a sentir un \textbf{efecto Jahn-Teller}, que dificulta la observación de la resonancia. 
+\item El método tiene la sensibilidad alta típica de una detección óptica y solo requiere un espectrómetro simple o espectrómetro de EPR modificado. 
+\end{enumerate}
+\subsection{Detección de EPR de estados triplete}
+\begin{enumerate}
+\item Los \textbf{estados triplete} se encuentran como estados excitados de sistemas de 2 electrones o como \textbf{excitones de triplete}. 
+\item Encontrarlos por excitones es útil para estudiar estructuras de defectos. 
+\item Los \textbf{estados triplete} son muy comunes en cristales molecuares. 
+\item Para la interacción del triplete con un campo externo $B_0$ paralelo al eje de estructura fina: Si el campo es cero los niveles $m_s=\{-1,0,1\}$ se separan por la constante de estructura fina $D$, siendo solo posibles 2 transiciones: $\ket{0}\rightarrow\ket{+1}$ y $\ket{-1}\rightarrow\ket{0}$. 
+\item Los niveles de triplete son usualmente ocupados luego de una transición óptica de un estado \textbf{singlete fundamental} a un \textbf{singlete excitado}, cruzándose los sistemas. 
+\item De todas formas existe una transición radiativa del nivel $\ket{+1}$ al $\ket{-1}$, pero que no tiene permitido el nivel $\ket{0}$, aún teniendo mayor población que estos 2 niveles. 
+\item Las transiciones de EPR aunmentarán la intensidad de luz emitida por cambios de población de $\ket{0}$ a los otros 2. 
+\end{enumerate}
+\subsection{Sensibilidad de mediciones de doble resonancia}
+\begin{enumerate}
+\item En el EPR ópticamente detectado, a diferencia del convencional, la \textbf{sensibilidad} es limitada más por el \textbf{ruido de disparo} del haz que por la temperatura. 
+\item Para el método resulta una alta sensibilidad dada por la luz intensa disponible. 
+\item Sin embargo en la práctica la sensibilidad depende mucho del sistema y la técnica utilizada. 
+\item Hasta ahora al menos no hay una investigación sistemática de la sensibilidad del método de Detección Óptica de EPR porque requeriría una forma efectiva de cuantificar los errores del método.
+\item Se define el llamado \textbf{\textit{Geschwind}} como el estimado del número mínimo de espínes detectables para un EPR de $\ket{k}$ vía luminiscencia. 
+\item Se puede obtener la llamada \textbf{Señal de Luminiscencia} $S_e$:
+\begin{equation}\label{eq37}S_e=\frac{\alpha n_a\eta E}{\tau_R}\end{equation}
+\begin{itemize}
+    \item $S_e$: Señal de Luminiscencia
+    \item $n_a$ Número de spines obtenido
+    \item $\alpha$: Cambio de $n_a$ bajo resonancia
+    \item $\eta$: Ángulo Sólido del Detector
+    \item $E$: Eficiencia del Fotodetector
+    \item $\tau_R$: Tiempo de vida radiativa
+\end{itemize}
+\item La señal se detecta contra el \textbf{fondo de ruido de disparo} (luminiscencias desde el nivel $\ket{a}$)  definidas como:
+\begin{equation}\label{eq38}\frac{S}{N}=\alpha\sqrt{\frac{n_a\eta E}{\tau_R}}\end{equation}
+\begin{itemize}
+    \item $\frac{S}{N}$: Fondo de ruido de disparo.
+\end{itemize}
+\item Si $\frac{S}{N}=1$ (caso límite) se obtiene de \ref{eq38} el número mínimo de espínes:
+\begin{equation}\label{eq39}n_a=\frac{\tau_R}{\alpha^2\eta E }\end{equation}
+\item El método de detección óptica permite hallar una menor cantidad de espínes en sistemas cristalinos con menos concentración de defectos.
+\end{enumerate}
+\subsection{Sensibilidad en Dicroísmo Magnético de Absorción}
+\begin{enumerate}
+\item Para aplicar lo anterior en sistemas más realistas debe considerarse la sensibilidad y además la llamada \textbf{Razón de Señal a Ruido (SNR)}. 
+\item El ruido es limitado por el ruido de disparo y el ruido termal no es relevante, a menos que la luz incidente sea infrarroja.
+\item El SNR viene dado por la intensidad de la luz incidente, dependente de la potencia de la fuente, de la atenuación de otros aparatos (monocromadores y filtros entre otros) y de la absorción y reflexión total de la muestra. 
+\item En el rango infrarrojo se producen problemas al depender el SNR de la eficiencia cuántica del detector. 
+\item Aunque por lo general la intensidad de la luz es tan alta que el ruido cuántico es mayor que el ruido de los detectores y el ruido electrónico. 
+\item Sin embargo, la intensidad de la luz se puede limitar por reacciones fotoquímicas de los defectos en estudio.
+\item El efecto de MCDA es proporcional a la diferencia de ocupación de $\ket{i}$ entre subniveles atómicos en equilibrio térmico, descartando los efectos ópticos de bombeo.
+\item Entonces es ventajoso trabajar a temperaturas bajas y campos magnéticos altos. 
+\item Para obtener señales de MCDA lo ideal es detectar un gran número de defectos con un una banda de absorción intensa con respecto al fondo de absorción de la muestra o a las bandas de otros defectos presentes. 
+\item Pero si hay demasiada absorción, entonces no pasará la luz suficiente a través de la muestra para que poder observarla en el detector. 
+\item Entonces se buscará evitar la pérdida de sensibilidad producida por esto, con el fin de aumentar el efecto de MCDA. 
+\item  A partir de las definiciones para MCDA de \ref{eq21}, \ref{eq22}, \ref{eq23} y \ref{eq24}, el ruido de disparo se representa como:
+\begin{equation}\label{eq40}\lvert\Delta N\rvert=\sqrt{N}\end{equation}
+\begin{itemize}
+    \item $N$: Número de partículas emitidas
+    \item $\lvert\Delta N\rvert$: Módulo de la diferencia entre número de partículas
+\end{itemize}
+\begin{equation}\label{eq41}\lvert\Delta \alpha\rvert=\frac{1}{d}\lvert\frac{\Delta N}{N}\rvert=\frac{1}{d\sqrt{N}} \end{equation}
+\begin{itemize}
+    \item $\lvert\Delta\alpha\rvert$: Módulo de la diferencia del factor dieléctrico $\alpha$
+    \item $d$: Ancho del Cristal
+\end{itemize}
+\begin{equation}\label{eq42}\lvert\Delta \epsilon\rvert= \frac{d}{4}2\lvert\Delta\alpha\rvert \end{equation}
+\begin{itemize}
+    \item $\lvert\Delta\epsilon\rvert$: Módulo de la diferencia en el valor del parámetro de MCDA-Mezcla de Spin $\epsilon$
+\end{itemize}
+\item Si se asume que $\alpha_r\simeq\alpha_l$, \ref{eq42} se vuelve:
+\begin{equation}\label{eq43}\lvert\Delta\epsilon\rvert=\frac{1}{2}\frac{\sqrt{N}}{N}=\frac{1}{2\sqrt{N_0}}e^{\frac{\alpha d}{2}}\end{equation}
+\begin{itemize}
+    \item $N_0$: Número de Partículas inicial.
+\end{itemize}
+\item Se optimiza con respecto a la concentración
+\begin{equation}\label{eq44}SNR=\lvert\frac{\epsilon}{\Delta\epsilon}\rvert=2\sqrt{N_0}\epsilon^\prime c e^{-\frac{\alpha^\prime cd}{2}}\end{equation}
+\begin{itemize}
+    \item $SNR$: Razón de Señal a Ruido
+    \item $\epsilon=c\epsilon^\prime$ ($c$ pequeño)
+    \item $\alpha=c\alpha^\prime$ ($c$ pequeño)
+\end{itemize}
+\item Para optimizar la SNR se evalúa cuando: $\frac{\delta(SNR)}{\delta c}=0$
+\begin{equation}\label{eq45}\frac{\delta SNR}{\delta c}=2\sqrt{N_0}\epsilon^\prime(1-\frac{\alpha^\prime dc}{2})e^{-\frac{\alpha^\prime cd}{2}}=0\end{equation}
+\item La condición se cumple en \ref{eq45} si $\alpha^\prime dc=\alpha d =2$, que corresponde a la densidad óptica de $\lvert log(e^{-2})\rvert = 0.87$. Por lo que no es bueno trabajar con densidades ópticas muy altas o muy bajas. 
+\end{enumerate}
+\subsection{Sensibilidad en EPR ópticamente detectado}
+\begin{enumerate}
+\item Para hacer una detección óptica de EPR se debe elegir una temperatura baja y un campo magnético alto.
+\item Se debe trabajar para poder alcanzar estos valores, bajo el \textbf{punto lambda} (temperatura máxima para tener una buena medición). 
+\item Sin embargo, trabajar a temperatura baja podría llevar a tiempos de relajación para la muestra demasiado grandes para modular las ondas  y para que el método de detección sea eficaz. 
+\item Se podría entonces trabajar a una temperatura mayor sin que se arruine el resto del montaje experimental, una cámara de gas como ambiente y usando \textbf{espectroscopía de modulación}.
+\item Dado que el MCDA es proporcional a $\frac{B_0}{T}$ a baja temperatura, los cambios pequeños de temperatura se podrían malinterpretar como señales de Doble Resonancia Electrón-Núcleo. 
+\item Se puede ocupar una modulación de cualquier tipo, por pequeña que sea. 
+\item Para evaluar la eficiencia del método, se cambia rápidamente y en un rango pequeño el campo magnético existente haciendo un aumento y una disminución, evaluando la diferencias entre ambas.
+\item Para altos campos magnéticos se necesita frecuencias de microondas. 
+\item Es común usar una frecuencia de $24 GHz$ (llamada \textbf{Banda K}) o de $35 GHz$ (llamada \textbf{Banda Q}). 
+\item Para frecuencias más altas se deberá usar \textbf{Resonadores Cuasiópticos}. 
+\item Sin embargo, dado que el tamaño de la muestra es pequeño, podría no haber suficiente absorción de luz, y aún menos cuando la muestra es pequeña.
+\item Las diferencias de población entre los subniveles magnéticos también se pueden influenciar por efectos de bombeo óptico. 
+\item Como los efectos dependen de parámetros de mezcla de espín y reglas de selección óptica, impiden la predicción sobre la sensibilidad. 
+\item Aún así, es útil tener capacidad experimental para modular el bombeo con luz (con sin polarizar), o para variar las frecuencias de modulación. 
+\item Se obtiene como resultado una frecuencia de modulación óptima que dependerá de la relajación espín-red cristalina y, dependiendo del experimento, de la temperatura del sistema. 
+\item Por otra parte, el bombeo óptico también puede acortar efectivamente el tiempo de relajación espín-red cristalina. 
+\item Esto podría ser útil para un tiempo muy largo, de manera que se acorta el tiempo con el bombeo y luego se pueden aplicar técnicas de modulación.
+\item Para detectar estados excitados por el método MCPE, la diferencia de población de los subniveles magnéticos son determinadas ante todo por el bombeo. \item Es necesaria una temperatura baja para hacer un tiempo de vida radiativo desde el $\ket{k}$ relajado tan largo como sea posible para poder cambiar las poblaciones por transiciones de microondas. 
+\end{enumerate}
+\section{Ejemplos}
+
+Los siguientes ejemplos corresponden a revisiones bibliográficas basadas en \cite{b1} y \cite{b2}, las que serán explicadas usando papers más recientes, privilegiando resultados en centros de color y defectos en alótropos de carbono.
+\subsection{Espectro de Excitación de MCDA de Defecto}
+\begin{enumerate}
+\item Un defecto se puede identificar por la variación del cambio en el Dicroísmo (MCDA) con respecto a la energía al irradiar con Rayos X a Temperatura ambiente, que genera un espectro de absorción.
+\item Se pueden medir con un \textbf{espectrómetro de Transformada de Fourier}. 
+\item El MCDA Es realizable al excitar un centro de color con un laser y permite hallar defectos en semiconductores.
+\item El \textbf{MCDA Espacialmente Resuelto} es un método no destructivo para medir la distribución espacial de defectos (por ejemplo, para hacer nanoelectrónica). 
+\item Esto no es posible de hacer con un EPR tradicional, pero si lo es con MCDA (dentro de las limitaciones de la sección transversal del rayo de luz).
+\end{enumerate}
+\subsection{Medición de Tiempo de Relajación para una red de espínes}
+\begin{enumerate}
+\item Medir tiempo de relajación para una red de espínes usando EPR convencional puede no funcionar, porque la difusión de spines puede variar el resultado.
+\item Pero usando MCDA se puede obtener ese mismo tiempo de relajación de manera simple usando el siguiente método:
+\begin{enumerate}
+    \item Se obtiene la polarización de $\ket{i}$ a partir del equilibrio térmico haciendo un cambio rápido de temperatura o campo magnético o aplicando un pulso de microondas.
+    \item Se observa el retorno del MCDA al equilibrio térmico. El tiempo que demore este proceso será el tiempo de relajación.
+\end{enumerate}
+\item Este método tiene como principal ventaja que el MCDA solo depende de la magnetización longitudinal. 
+\item El proceso de relajación cambia de dominante directo a un proceso de Raman.
+\item Los tiempos de relajación que pueden medirse con este método son del órden de $10-100\mu s$. 
+\item La desventaja del método ocurre al tratar de medir tiempos menores, donde se puede producir acoplamiento.
+\end{enumerate}
+\subsection{Determinación de estado de espín}
+\begin{enumerate}
+\item Para encontrar la carga de un defecto, es útil intentar tener un método para detectar las muy pequeñas diferencias entre niveles para medir el espectro de EPR.
+\item Se puede usar MCDA para hallar el estado de espín, considerando que \ref{eq28} muestra que $\epsilon$ incluye información diamagnética y paramagnética
+\begin{equation}\label{eq46}P=g_e\mu_B S B_s(\beta g_e\mu_B B_0)\end{equation}
+\begin{itemize}
+    \item $P$: Polarización de Spin
+    \item $S$: Operador de Spin
+    \item $B_0$ campo magnético inicial.
+\end{itemize}
+\item El Campo Magnético producido por el espín es
+\begin{equation}\label{eq47}B_s(x)=\frac{1}{S}[(S+\frac{1}{2})coth(S+\frac{1}{2})x-\frac{1}{2}coth(\frac{1}{2})]\end{equation}
+\begin{itemize}
+\item $B_s(x)$: Campo Magnético inducido por el spin
+\item $x=\beta g_e\mu_B B_0$
+\end{itemize}
+\item El valor de $P$ de \ref{eq46} no puede ser usado para medir espín por MCDA porque contiene un término diamagnético. 
+\item Usando $B(x)$ es posible optener $\epsilon$ solo dependiente de elementos paramagnéticos
+\begin{equation}\label{eq48}R_{exp}=\frac{\epsilon(B_1,T_2)-\epsilon(B_1,T_2)}{\epsilon(B_2,T_1)-\epsilon(B_2,T_2)}=\frac{\epsilon_p(B_1,T_2)-\epsilon_p(B_1,T_2)}{\epsilon_p(B_2,T_1)-\epsilon_p(B_2,T_2)}\end{equation}
+\begin{itemize}
+    \item $R_{exp}$: Razón definida para hallar $\epsilon$
+    \item $\epsilon(B_i,T_i)$: Coeficiente de MCDA para campo magnético $B_i$ y temperatura $T_i$
+    \item $\epsilon_p(B_i,T_i)$: Parte paramagnética del coeficiente de MCDA para campo magnético $B_i$ y temperatura $T_i$
+\end{itemize}
+\item Y, usando la proporcionabilidad del $\epsilon_p$ respecto al campo de espín
+\begin{equation}\label{eq49}\epsilon_p\propto SB_s(x)\end{equation}
+\item La razón de \ref{eq48} es
+\begin{equation}\label{eq50}R_{exp}(S)=\frac{B_s(S,\frac{B_1}{T_2})-B_s(S,\frac{B_1}{T_2})}{B_s(S,\frac{B_2}{T_1})-B_s(S,\frac{B_2}{T_2})}\end{equation}
+\begin{itemize}
+    \item $R_{exp}(S)$: Razón definida en \ref{eq48}, dependiente de S.
+    \item $B_s(S,\frac{B_i}{T_i})$: Campo magnético inducido por el spin, dependiente del operador de espín $S$, el campo magnético $B_i$ y la temperatura $T_i$
+\end{itemize}
+\item Por ende, se puede obtener $R_{exp}$ modificando $S$, y el valor de $S$ del sistema será donde $R_{exp}=R(S)$.
+\item El efecto mostrado anteriormente produce una pequeña separación entre niveles con magnetización
+\begin{equation}\label{eq51}M=\frac{\mu}{2}[g_itanh(\frac{g_i\beta\mu_B B
+}{2})+g_k^*tanh(\frac{g_k^*\beta\mu_B B}{2})]\end{equation} 
+\begin{itemize}
+    \item $M$: Magnetización
+    \item $g_1$: Degeneración del nivel $\ket{i}$
+    \item $g_2$: Degeneración del nivel $\ket{k}$
+\end{itemize}
+\subsection{Espectroscopía de Estados de Rydberg}
+\item Cuando $\ket{k}$ se puebla por bombeo óptico del Laser $L_1$, las transiciones a niveles superiores $\ket{m}$ se pueden lograr con un segundo Laser $L_2$. 
+\item Esta excitación de 2 pasos se puede ver como el caso resonante de una excitación con 2 fotones con frecuencias diferentes $\hslash\omega_1$ y $\hslash\omega_2$. 
+\item Al tener los estados $\ket{i}$ y $\ket{m}$ la misma paridad, no se pueden alcanzar con solo una transición de fotones. 
+\item Con 2 Laser de luz visible, se pueden alcanzar niveles $\ket{m}$ con una energía de excitación de hasta $6 eV$, doblando los estados alcanzables si se dobla la intensidad.
+\item Este tipo de energías son las que hacen accesibles a los niveles de Rydberg de la mayoría de los átomos.
+\item Las características espectrópicas de los Estados de Rydberg permiten el estudio de problemas fundamentales de Óptica Cuántica, Dinámica No Lineal y Conductas Caóticas de sistemas cuánticos, lo que motiva su estudio detallado.
+\item Se define el término $T_n$ para un nivel Rydberge
+\begin{equation}\label{eq52}T_n=P_{ion}-\frac{R}{(n-\delta(n,l))^2}=P_{ion}-\frac{R}{n^{*^2}}\end{equation}
+\begin{itemize}
+    \item $T_n$: Valor de un nivel de Rydberg
+    \item $P_{ion}$: Potencial de Ionización
+    \item $n$: Número cuántico principal del nivel
+    \item $\delta(n,l)$: Defecto existente, dependiente de $n$ y el momento angular $l$
+    \item $R$: Constante de Rydberg
+    \item $n^*=n-\delta(n,l)$
+\end{itemize}
+\item El defecto describe la desviación del potencial real del núcleo. La ecuación \ref{eq52} tiene forma de Coulomb.
+\item Por lo general se empieza la investigacion de  átomos de Rydberg con átomos alcalinos ya que con ellos es más simple hacer celdas o rayos. 
+\item Por su baja energía de ionización, sus estados de Rydberg se pueden alcanzar por excitación con 2 lasers en espectro visible. 
+\end{enumerate}
+\subsection{Bombeo de Emisión Estimulada}
+\begin{enumerate}
+\item Para una doble resonancia óptica-óptica de tipo $\Lambda$ el Laser de sonda induce transiciones decrecientes desde $k=\ket{1}$ hasta $f=\ket{m}$, lográndose un \textbf{Bombeo de Emisión Estimulada}.
+\item Para un bombeo monocromático y 2 láseres de sonda, la condición de resonancia de ambos con una partícula en movimiento es:
+\begin{equation}\label{eq53}\omega_1-\textbf{k}_1\cdot\textbf{v}-(\omega_2-\textbf{k}_2\cdot\textbf{v})=\frac{E_m-E_1}{\hslash}\pm\Gamma_{m1}\end{equation}
+\begin{itemize}
+    \item $\omega_1$: Frecuencia del Laser 1
+    \item $\omega_2$: Frecuencia del Laser 2
+    \item $\textbf{v}$: Velocidad de la partícula
+    \item $\textbf{k}_1$: Vector de onda del Laser 1
+    \item $\textbf{k}_2$: Vector de onda del Laser 2
+    \item $E_m$: Energía de estado $\ket{m}$
+    \item $E_i$: Energía de estado $\ket{i}$
+    \item $\Gamma_{m1}=\gamma_1+\gamma_m$: Suma de anchos no homogéneos: 
+\end{itemize}
+\end{enumerate}
+\subsection{Etiquetado de Polarización}
+\begin{enumerate}
+\item Muchas veces es necesario ganar una comprensión en un mayor rango del espectro de Doble Resonancia Óptica-Óptica con menor resolución, antes de escanear secciones de la muestra. 
+\item Se requiere un \textbf{Etiquetado de Polarización}, introducida por Schawlow y su grupo. 
+\item Un Laser de bombeo polarizado $L_1$ orienta a las moléculas en un nivel inferior seleccionado $\ket{i}$ o un nivel superior $\ket{k}$, \textit{etiquetando} estos niveles. 
+\item En lugar de un Laser de sonda de un solo modo, se envía un continuo espectral linealmente polarizado a la muestra entre 2 polarizadores cruzados.
+\item Solo esos valores de longitud de onda $\lambda_{lm}$ o $\lambda_{km}$ cambian su polarización, lo que corresponde a transiciones moleculares empezando desde los llamados \textbf{niveles etiquetados} $\ket{k}$ o $\ket{i}$.
+\item Esas longitudes de onda se transmiten a través de un analizador cruzado, y se separan usando un espectrógrafo, grabándose ambas en un analizador multicanal o una cámara CCD. 
+\end{enumerate}
+\section{Agradecimientos}
+  Agradecimientos a los aportes indirectos en la realización de este reporte de Luis Javier Martínez, Raúl Coto, Rafael González y Felipe Urbina, César Jara y Ariel Norambuena.
+  
+  Agradecimientos también a la Beca de Doctorado de la Universidad Mayor por financiar mi vida cotidiana durante mi investigación.
+\nocite{*}
+\bibliographystyle{plainnat} 
+\bibliography{main}
+\end{document}

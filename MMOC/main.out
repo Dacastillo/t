@@ -1,0 +1,52 @@
+\BOOKMARK [0][-]{chapter.1}{Introducción}{}% 1
+\BOOKMARK [0][-]{chapter.2}{Ecuación de Schrodinger}{}% 2
+\BOOKMARK [1][-]{section.2.1}{Evolución temporal como operación unitaria}{chapter.2}% 3
+\BOOKMARK [2][-]{subsection.2.1.1}{Forma del operador evolución temporal}{section.2.1}% 4
+\BOOKMARK [2][-]{subsection.2.1.2}{Exponencial\040temporal\040como\040producto\040infinito}{section.2.1}% 5
+\BOOKMARK [2][-]{subsection.2.1.3}{Propiedades del operador Evolución}{section.2.1}% 6
+\BOOKMARK [1][-]{section.2.2}{Formas para hallar soluciones de la ecuación de Schrodinger}{chapter.2}% 7
+\BOOKMARK [2][-]{subsection.2.2.1}{Método de Diagonalización}{section.2.2}% 8
+\BOOKMARK [2][-]{subsection.2.2.2}{Método de Función de onda}{section.2.2}% 9
+\BOOKMARK [0][-]{chapter.3}{Ecuación Maestra Fenomenológica}{}% 10
+\BOOKMARK [1][-]{section.3.1}{Derivación formal: semigrupos}{chapter.3}% 11
+\BOOKMARK [1][-]{section.3.2}{Derivación para sistema de 2 niveles acoplado a baño de osciladores}{chapter.3}% 12
+\BOOKMARK [1][-]{section.3.3}{Derivación para sistema comprimido de muchos modos}{chapter.3}% 13
+\BOOKMARK [2][-]{subsection.3.3.1}{Obtención de operadores de Linblad}{section.3.3}% 14
+\BOOKMARK [0][-]{chapter.4}{Ecuación Maestra Microscópica}{}% 15
+\BOOKMARK [1][-]{section.4.1}{Introducción}{chapter.4}% 16
+\BOOKMARK [1][-]{section.4.2}{Desarrollo\040y\040suposiciones}{chapter.4}% 17
+\BOOKMARK [2][-]{subsection.4.2.1}{Aproximación de Born}{section.4.2}% 18
+\BOOKMARK [2][-]{subsection.4.2.2}{Acoplamiento Débil}{section.4.2}% 19
+\BOOKMARK [2][-]{subsection.4.2.3}{Primera Aproximación de Markov}{section.4.2}% 20
+\BOOKMARK [2][-]{subsection.4.2.4}{Aproximación Secular}{section.4.2}% 21
+\BOOKMARK [2][-]{subsection.4.2.5}{Segunda Aproximación de Markov}{section.4.2}% 22
+\BOOKMARK [1][-]{section.4.3}{Ejemplos}{chapter.4}% 23
+\BOOKMARK [2][-]{subsection.4.3.1}{Spin\040Boson\040Model}{section.4.3}% 24
+\BOOKMARK [0][-]{chapter.5}{Quantum\040Jumps}{}% 25
+\BOOKMARK [1][-]{section.5.1}{Quantum\040Jumps\040Markovianos}{chapter.5}% 26
+\BOOKMARK [2][-]{subsection.5.1.1}{Evolución Temporal sin salto}{section.5.1}% 27
+\BOOKMARK [2][-]{subsection.5.1.2}{Definición de salto cuántico}{section.5.1}% 28
+\BOOKMARK [2][-]{subsection.5.1.3}{Promediar sobre todas las trayectorias produce la ecuación maestra}{section.5.1}% 29
+\BOOKMARK [1][-]{section.5.2}{Derivación de Carmichael de Quantum Jumps}{chapter.5}% 30
+\BOOKMARK [1][-]{section.5.3}{Ejemplo:Modelo de Jaynes-Cumming con pérdidas}{chapter.5}% 31
+\BOOKMARK [0][-]{chapter.6}{Métodos de Espacio de Fases}{}% 32
+\BOOKMARK [1][-]{section.6.1}{Definición de Funciones de espacio de Fases}{chapter.6}% 33
+\BOOKMARK [2][-]{subsection.6.1.1}{Función Q}{section.6.1}% 34
+\BOOKMARK [2][-]{subsection.6.1.2}{Función P}{section.6.1}% 35
+\BOOKMARK [2][-]{subsection.6.1.3}{Función de Wigner}{section.6.1}% 36
+\BOOKMARK [1][-]{section.6.2}{Uso\040de\040las\040funciones\040de\040espacio\040de\040fase}{chapter.6}% 37
+\BOOKMARK [2][-]{subsection.6.2.1}{Funciones Características}{section.6.2}% 38
+\BOOKMARK [2][-]{subsection.6.2.2}{Transformación de Similaridad}{section.6.2}% 39
+\BOOKMARK [1][-]{section.6.3}{Ejemplo:\040Condensado\040de\040Bose-Einstein}{chapter.6}% 40
+\BOOKMARK [0][-]{chapter.7}{Ruido Cuántico}{}% 41
+\BOOKMARK [1][-]{section.7.1}{Ejemplos\040de\040Ruido}{chapter.7}% 42
+\BOOKMARK [2][-]{subsection.7.1.1}{Movimiento\040Browniano}{section.7.1}% 43
+\BOOKMARK [2][-]{subsection.7.1.2}{Procesos Markovianos y Estadística}{section.7.1}% 44
+\BOOKMARK [2][-]{subsection.7.1.3}{Correlaciones\040y\040ruido}{section.7.1}% 45
+\BOOKMARK [2][-]{subsection.7.1.4}{Valores\040estacionarios\040para\040tiempos\040infinitos}{section.7.1}% 46
+\BOOKMARK [1][-]{section.7.2}{Ruido Clásico}{chapter.7}% 47
+\BOOKMARK [2][-]{subsection.7.2.1}{Ruidos\040blancos\040y\040de\040color}{section.7.2}% 48
+\BOOKMARK [2][-]{subsection.7.2.2}{Ecuación de Langevin Clásica}{section.7.2}% 49
+\BOOKMARK [2][-]{subsection.7.2.3}{Ecuación de Fokker-Planck}{section.7.2}% 50
+\BOOKMARK [1][-]{section.7.3}{Ruido en Sistemas Cuánticos}{chapter.7}% 51
+\BOOKMARK [2][-]{subsection.7.3.1}{El\040ruido\040es\040necesario\040para\040mantener\040la\040cuanticidad}{section.7.3}% 52

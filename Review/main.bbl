@@ -1,0 +1,53 @@
+\begin{thebibliography}{8}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[D.(2009)]{p4}
+Carbonera D.
+\newblock Optically detected magnetic resonance (odmr) of photoexcited triplet
+  states.
+\newblock \emph{Photosynth Res}, 102:\penalty0 403--414, 2009.
+
+\bibitem[et. al.(2011)]{p1}
+Dreau~A. et. al.
+\newblock Avoiding power broadening in optically detected magnetic resonance of
+  single nv defects for enhanced dc magnetic field sensitivity.
+\newblock \emph{Physics Review B}, 84:\penalty0 195--204, 2011.
+
+\bibitem[et.al.(2019)]{p3}
+Barson~M. et.al., Krausz~E.
+\newblock The fine structure of the neutral nitrogen-vacancy center in diamond.
+\newblock \emph{Nanophotonics}, 8(11):\penalty0 1985--1991, 2019.
+
+\bibitem[et.al.(2016)]{p6}
+Scheuer~J. et.al., Schwartz~I.
+\newblock Optically induced dynamic nuclear spin polarisation in diamond.
+\newblock \emph{New J. Phys. 1}, 18-1:\penalty0 30--40, 2016.
+
+\bibitem[et.al.(2014)]{p5}
+Schirhagl~R. et.al., Chang~K.
+\newblock Nitrogen-vacancy centers in diamond: Nanoscale sensors for physics
+  and biology.
+\newblock \emph{Annu. Rev. Phys. Chem.}, 65:\penalty0 83--105, 2014.
+
+\bibitem[Overhof~H.(2002)]{b1}
+Spaeth~J. Overhof~H.
+\newblock \emph{Point Defects in Semiconductors and Insulators}.
+\newblock Springer, 1 edition, 9 2002.
+\newblock ISBN 978-3-642-62722-4.
+
+\bibitem[W.(2014)]{b2}
+Demtroder W.
+\newblock \emph{Laser Spectroscopy 2: Experimental Techniques}.
+\newblock Springer, 5 edition, 11 2014.
+\newblock ISBN 978-3-662-44640-9.
+
+\bibitem[Wrachtrup~J.(2006)]{p2}
+Jelezko~F. Wrachtrup~J.
+\newblock Single defect centres in diamond: A review.
+\newblock \emph{phys.stat.sol.(a)}, 13:\penalty0 3207--3225, 2006.
+
+\end{thebibliography}

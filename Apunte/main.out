@@ -1,0 +1,181 @@
+\BOOKMARK [0][-]{chapter.1}{Generación de Ecuaciones Maestras}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Derivación formal: semigrupos}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{Introducción}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.3}{Derivación para sistema de 2 niveles acoplado a baño de osciladores}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.4}{Derivación para sistema comprimido de muchos modos}{chapter.1}% 5
+\BOOKMARK [0][-]{chapter.2}{Clonado Cuántico}{}% 6
+\BOOKMARK [1][-]{section.2.1}{Motivaciones}{chapter.2}% 7
+\BOOKMARK [1][-]{section.2.2}{¿Se puede clonar un estado?}{chapter.2}% 8
+\BOOKMARK [2][-]{subsection.2.2.1}{¿Qué es clonar?}{section.2.2}% 9
+\BOOKMARK [2][-]{subsection.2.2.2}{Teorema\040de\040no-clonado}{section.2.2}% 10
+\BOOKMARK [1][-]{section.2.3}{Máquinas de clonado cuántico}{chapter.2}% 11
+\BOOKMARK [2][-]{subsection.2.3.1}{Máquina Universal de Clonado Cuántico}{section.2.3}% 12
+\BOOKMARK [2][-]{subsection.2.3.2}{Copiado\040covariante\040\(dependientes\040del\040estado\)}{section.2.3}% 13
+\BOOKMARK [2][-]{subsection.2.3.3}{Máquina Probabilista de copiado}{section.2.3}% 14
+\BOOKMARK [1][-]{section.2.4}{Implementación en sistemas físicos de máquinas de clonado}{chapter.2}% 15
+\BOOKMARK [2][-]{subsection.2.4.1}{Implementación de máquinas de copiado universal en circuitos}{section.2.4}% 16
+\BOOKMARK [2][-]{subsection.2.4.2}{Copiado\040universal\040para\040N\040dimensiones}{section.2.4}% 17
+\BOOKMARK [2][-]{subsection.2.4.3}{Esquema para realizar una máquina de copiado}{section.2.4}% 18
+\BOOKMARK [0][-]{chapter.3}{Termodinámica Cuántica}{}% 19
+\BOOKMARK [1][-]{section.3.1}{Motivaciones}{chapter.3}% 20
+\BOOKMARK [1][-]{section.3.2}{La Termodinámica como resultado del entrelazamiento}{chapter.3}% 21
+\BOOKMARK [2][-]{subsection.3.2.1}{Axiomas de la Termodinámica}{section.3.2}% 22
+\BOOKMARK [2][-]{subsection.3.2.2}{Sistemas Cuánticos Envariantes}{section.3.2}% 23
+\BOOKMARK [2][-]{subsection.3.2.3}{Ensembles Microcanónico y Canónico a partir de la envariancia}{section.3.2}% 24
+\BOOKMARK [1][-]{section.3.3}{Construcción de la termodinámica a partir de principios cuánticos}{chapter.3}% 25
+\BOOKMARK [2][-]{subsection.3.3.1}{Ensembles y Entropía de Von Neumann}{section.3.3}% 26
+\BOOKMARK [2][-]{subsection.3.3.2}{Estados\040Pasivos\040y\040Pasivos\040Completos}{section.3.3}% 27
+\BOOKMARK [2][-]{subsection.3.3.3}{Redefinición de los axiomas termodinámicos}{section.3.3}% 28
+\BOOKMARK [1][-]{section.3.4}{Aplicaciones a Sistemas Cuánticos}{chapter.3}% 29
+\BOOKMARK [2][-]{subsection.3.4.1}{Dinámica de Sistemas Cuánticos abiertos}{section.3.4}% 30
+\BOOKMARK [2][-]{subsection.3.4.2}{Heralded\040Photons}{section.3.4}% 31
+\BOOKMARK [0][-]{chapter.4}{Principios de Incerteza Entrópica}{}% 32
+\BOOKMARK [1][-]{section.4.1}{Introducción}{chapter.4}% 33
+\BOOKMARK [1][-]{section.4.2}{Tipos\040de\040Incerteza}{chapter.4}% 34
+\BOOKMARK [2][-]{subsection.4.2.1}{Incertezas\040sin\040memoria}{section.4.2}% 35
+\BOOKMARK [2][-]{subsection.4.2.2}{Incertezas\040con\040memoria}{section.4.2}% 36
+\BOOKMARK [2][-]{subsection.4.2.3}{Incertezas posición-Momentum}{section.4.2}% 37
+\BOOKMARK [1][-]{section.4.3}{Aplicaciones}{chapter.4}% 38
+\BOOKMARK [2][-]{subsection.4.3.1}{Criptografía Cuántica}{section.4.3}% 39
+\BOOKMARK [2][-]{subsection.4.3.2}{Dualidad Onda-Partícula}{section.4.3}% 40
+\BOOKMARK [0][-]{chapter.5}{Introducción a Confinamiento en Fotónica}{}% 41
+\BOOKMARK [1][-]{section.5.1}{Introducción}{chapter.5}% 42
+\BOOKMARK [1][-]{section.5.2}{Electromagnetismo en medios con dieléctrico variable}{chapter.5}% 43
+\BOOKMARK [1][-]{section.5.3}{Inserción de Defectos}{chapter.5}% 44
+\BOOKMARK [1][-]{section.5.4}{Aplicación: Efecto Purcell}{chapter.5}% 45
+\BOOKMARK [0][-]{chapter.6}{Ruido Cuántico}{}% 46
+\BOOKMARK [1][-]{section.6.1}{Ejemplos\040de\040Ruido}{chapter.6}% 47
+\BOOKMARK [2][-]{subsection.6.1.1}{Movimiento\040Browniano}{section.6.1}% 48
+\BOOKMARK [2][-]{subsection.6.1.2}{Procesos Markovianos y Estadística}{section.6.1}% 49
+\BOOKMARK [2][-]{subsection.6.1.3}{Correlaciones\040y\040ruido}{section.6.1}% 50
+\BOOKMARK [2][-]{subsection.6.1.4}{Valores\040estacionarios\040para\040tiempos\040infinitos}{section.6.1}% 51
+\BOOKMARK [1][-]{section.6.2}{Ruido Clásico}{chapter.6}% 52
+\BOOKMARK [2][-]{subsection.6.2.1}{Ruidos\040blancos\040y\040de\040color}{section.6.2}% 53
+\BOOKMARK [2][-]{subsection.6.2.2}{Ecuación de Langevin Clásica}{section.6.2}% 54
+\BOOKMARK [2][-]{subsection.6.2.3}{Ecuación de Fokker-Planck}{section.6.2}% 55
+\BOOKMARK [1][-]{section.6.3}{Ruido en Sistemas Cuánticos}{chapter.6}% 56
+\BOOKMARK [2][-]{subsection.6.3.1}{El\040ruido\040es\040necesario\040para\040mantener\040la\040cuanticidad}{section.6.3}% 57
+\BOOKMARK [2][-]{subsection.6.3.2}{Ecuación de Langevin Cuántica}{section.6.3}% 58
+\BOOKMARK [2][-]{subsection.6.3.3}{Otra derivación de ecuación maestra}{section.6.3}% 59
+\BOOKMARK [0][-]{chapter.7}{Óptica Cuántica}{}% 60
+\BOOKMARK [1][-]{section.7.1}{Teoría de Interacción Átomo-Campo de Einstein}{chapter.7}% 61
+\BOOKMARK [2][-]{subsection.7.1.1}{Probabilidad de distribución Bose-Einstein}{section.7.1}% 62
+\BOOKMARK [2][-]{subsection.7.1.2}{Variancia en Distribución de Poisson}{section.7.1}% 63
+\BOOKMARK [2][-]{subsection.7.1.3}{Derivación de número de fotones}{section.7.1}% 64
+\BOOKMARK [1][-]{section.7.2}{Aproximación Semiclásica a la Teoría Átomo Campo}{chapter.7}% 65
+\BOOKMARK [2][-]{subsection.7.2.1}{Ecuación para el elemento de matriz densidad}{section.7.2}% 66
+\BOOKMARK [1][-]{section.7.3}{Cuantización del Campo Electromagnético}{chapter.7}% 67
+\BOOKMARK [2][-]{subsection.7.3.1}{Hamiltoniano\040en\040operadores\040escalera}{section.7.3}% 68
+\BOOKMARK [2][-]{subsection.7.3.2}{Conmutador entre elementos de Campo Electromagnético}{section.7.3}% 69
+\BOOKMARK [2][-]{subsection.7.3.3}{Estado número como excitaciones del vacío}{section.7.3}% 70
+\BOOKMARK [2][-]{subsection.7.3.4}{Conmutador\040de\040potencias\040de\040operadores\040escalera}{section.7.3}% 71
+\BOOKMARK [2][-]{subsection.7.3.5}{Operación con serie de potencias de operadores escalera}{section.7.3}% 72
+\BOOKMARK [2][-]{subsection.7.3.6}{Más conmutadores entre elementos de campo electromagnético}{section.7.3}% 73
+\BOOKMARK [1][-]{section.7.4}{Estados del Campo Electromagnético}{chapter.7}% 74
+\BOOKMARK [2][-]{subsection.7.4.1}{No existen autoestados del operador creación}{section.7.4}% 75
+\BOOKMARK [2][-]{subsection.7.4.2}{Producto de proyector coherente y operador destrucción}{section.7.4}% 76
+\BOOKMARK [2][-]{subsection.7.4.3}{Evolución de estado inicialmente coherente en el tiempo}{section.7.4}% 77
+\BOOKMARK [2][-]{subsection.7.4.4}{Combinación de operadores desplazamiento y compresión}{section.7.4}% 78
+\BOOKMARK [2][-]{subsection.7.4.5}{Valor\040esperado\040de\040Operador\040Desplazamiento}{section.7.4}% 79
+\BOOKMARK [2][-]{subsection.7.4.6}{Valor de espectación del cuadrado de n}{section.7.4}% 80
+\BOOKMARK [2][-]{subsection.7.4.7}{Factor\040de\040Mandel\040para\040estado\040squeezed}{section.7.4}% 81
+\BOOKMARK [1][-]{section.7.5}{Teoría Cuántica de la Coherencia}{chapter.7}% 82
+\BOOKMARK [1][-]{section.7.6}{Descripción de Espacio de Fases}{chapter.7}% 83
+\BOOKMARK [2][-]{subsection.7.6.1}{Integral de la función de Wigner}{section.7.6}% 84
+\BOOKMARK [2][-]{subsection.7.6.2}{Cuanticidad de un estado por funciones de correlación}{section.7.6}% 85
+\BOOKMARK [1][-]{section.7.7}{Interacción Átomo-Campo}{chapter.7}% 86
+\BOOKMARK [1][-]{section.7.8}{Interacción Sistema-Reservorio}{chapter.7}% 87
+\BOOKMARK [2][-]{subsection.7.8.1}{Ecuación Maestra para sistema simple}{section.7.8}% 88
+\BOOKMARK [2][-]{subsection.7.8.2}{Derivación de Ecuaciones desde Ecuación Maestra}{section.7.8}% 89
+\BOOKMARK [2][-]{subsection.7.8.3}{Solución de Ecuación Maestra}{section.7.8}% 90
+\BOOKMARK [1][-]{section.7.9}{Teoría Cuántica del Laser}{chapter.7}% 91
+\BOOKMARK [2][-]{subsection.7.9.1}{Dinámica Jaynes-Cummings}{section.7.9}% 92
+\BOOKMARK [0][-]{chapter.8}{Información Cuántica}{}% 93
+\BOOKMARK [1][-]{section.8.1}{Información y Entropía: Introducción}{chapter.8}% 94
+\BOOKMARK [2][-]{subsection.8.1.1}{Propiedades de Entropía de Von Neumann}{section.8.1}% 95
+\BOOKMARK [2][-]{subsection.8.1.2}{Ejemplo\040simple\040de\040Capacidad\040de\040un\040canal}{section.8.1}% 96
+\BOOKMARK [2][-]{subsection.8.1.3}{Análisis del operador de Hadamard}{section.8.1}% 97
+\BOOKMARK [2][-]{subsection.8.1.4}{Teorema\040de\040Bell\040para\040estado\040de\040Bell}{section.8.1}% 98
+\BOOKMARK [1][-]{section.8.2}{Operadores\040densidad\040y\040Traza\040Parcial}{chapter.8}% 99
+\BOOKMARK [2][-]{subsection.8.2.1}{Propiedades\040de\040Matriz\040Densidad}{section.8.2}% 100
+\BOOKMARK [2][-]{subsection.8.2.2}{Estado\040totalmente\040incoherente\040en\040otra\040base}{section.8.2}% 101
+\BOOKMARK [2][-]{subsection.8.2.3}{Angulo entre puntos del estado de Bloch es el doble del ángulo entre estados}{section.8.2}% 102
+\BOOKMARK [2][-]{subsection.8.2.4}{Trazas\040y\040mediciones\040en\040estado\040tripartito}{section.8.2}% 103
+\BOOKMARK [2][-]{subsection.8.2.5}{Descomposición para estado de Werner}{section.8.2}% 104
+\BOOKMARK [1][-]{section.8.3}{Entrelazamiento\040de\040estados}{chapter.8}% 105
+\BOOKMARK [2][-]{subsection.8.3.1}{Generalización de descomposición de Schmidt}{section.8.3}% 106
+\BOOKMARK [2][-]{subsection.8.3.2}{Ejemplo de Entropía de Von Neumann para un estado}{section.8.3}% 107
+\BOOKMARK [2][-]{subsection.8.3.3}{Ejemplos\040de\040descomposiciones\040de\040estados\040entrelazados}{section.8.3}% 108
+\BOOKMARK [2][-]{subsection.8.3.4}{Separabilidad\040de\040un\040estado\040general}{section.8.3}% 109
+\BOOKMARK [2][-]{subsection.8.3.5}{Máquina de copiado covariante}{section.8.3}% 110
+\BOOKMARK [2][-]{subsection.8.3.6}{Discriminación de estados usando POVM}{section.8.3}% 111
+\BOOKMARK [1][-]{section.8.4}{Operaciones Cuánticas}{chapter.8}% 112
+\BOOKMARK [2][-]{subsection.8.4.1}{Ejemplo de Fidelidad de Canales Cuánticos}{section.8.4}% 113
+\BOOKMARK [2][-]{subsection.8.4.2}{Resultado\040de\040hacer\040un\040doble\040amplitude\040damping}{section.8.4}% 114
+\BOOKMARK [2][-]{subsection.8.4.3}{Entrelazamientos\040para\040estados\040de\040Werner}{section.8.4}% 115
+\BOOKMARK [2][-]{subsection.8.4.4}{Ejemplo\040de\040entrelazamiento\040de\040estados}{section.8.4}% 116
+\BOOKMARK [2][-]{subsection.8.4.5}{Teleportación de entrelazamiento}{section.8.4}% 117
+\BOOKMARK [2][-]{subsection.8.4.6}{Intercambio\040de\040entrelazamiento}{section.8.4}% 118
+\BOOKMARK [2][-]{subsection.8.4.7}{Ejemplo de Discordia Cuántica}{section.8.4}% 119
+\BOOKMARK [1][-]{section.8.5}{Propiedades de la Entropía Cuántica}{chapter.8}% 120
+\BOOKMARK [2][-]{subsection.8.5.1}{Entropía para estados puros y mixtos}{section.8.5}% 121
+\BOOKMARK [2][-]{subsection.8.5.2}{Cota superior para la entropía}{section.8.5}% 122
+\BOOKMARK [2][-]{subsection.8.5.3}{Las entropías parciales de un estado compuesto puro son iguales}{section.8.5}% 123
+\BOOKMARK [2][-]{subsection.8.5.4}{Entropía de una combinación probabilista de estados}{section.8.5}% 124
+\BOOKMARK [2][-]{subsection.8.5.5}{Entopía de un estado Clásico-Cuántico}{section.8.5}% 125
+\BOOKMARK [1][-]{section.8.6}{Entropía de un Estado Producto}{chapter.8}% 126
+\BOOKMARK [1][-]{section.8.7}{Entrelazamiento\040de\040Sistemas\040Compuestos\040Puros}{chapter.8}% 127
+\BOOKMARK [1][-]{section.8.8}{Información Mútua como Entropía Relativa}{chapter.8}% 128
+\BOOKMARK [1][-]{section.8.9}{Entropia condicional como Entropía}{chapter.8}% 129
+\BOOKMARK [1][-]{section.8.10}{Entropía de ensemble Clásico Cuántico}{chapter.8}% 130
+\BOOKMARK [1][-]{section.8.11}{La entropía es invariante bajo transformaciones unitarias.}{chapter.8}% 131
+\BOOKMARK [1][-]{section.8.12}{Entropía de estados producto 1}{chapter.8}% 132
+\BOOKMARK [1][-]{section.8.13}{Entropía de estados producto 2}{chapter.8}% 133
+\BOOKMARK [1][-]{section.8.14}{Entropía de 2 ensembles Clásico-Cuántico}{chapter.8}% 134
+\BOOKMARK [1][-]{section.8.15}{Las medidas proyectivas suben la entropía}{chapter.8}% 135
+\BOOKMARK [1][-]{section.8.16}{Los POVM pueden bajar la entropía.}{chapter.8}% 136
+\BOOKMARK [1][-]{section.8.17}{La\040Distancia\040es\040invariante\040ante\040transformaciones\040unitarias.}{chapter.8}% 137
+\BOOKMARK [1][-]{section.8.18}{Probabilidad de Discriminación de Mínimo Error y Distancia}{chapter.8}% 138
+\BOOKMARK [1][-]{section.8.19}{Probabilidad de Discriminación para Estados Puros}{chapter.8}% 139
+\BOOKMARK [1][-]{section.8.20}{El estado bipartito es purificación para la matriz densidad.}{chapter.8}% 140
+\BOOKMARK [1][-]{section.8.21}{Igualdad\040de\040definiciones\040de\040Fidelidad}{chapter.8}% 141
+\BOOKMARK [1][-]{section.8.22}{Fidelidad\040de\040estados\040producto}{chapter.8}% 142
+\BOOKMARK [1][-]{section.8.23}{Estado Clásico-Cuántico no ortogonal en B}{chapter.8}% 143
+\BOOKMARK [2][-]{subsection.8.23.1}{Información Accesible al medir en base lógica}{section.8.23}% 144
+\BOOKMARK [2][-]{subsection.8.23.2}{Límite de Holevo}{section.8.23}% 145
+\BOOKMARK [2][-]{subsection.8.23.3}{Comparación gráfica entre entropía, Límite de Holevo e Información Accesible}{section.8.23}% 146
+\BOOKMARK [1][-]{section.8.24}{Distintos\040tipos\040de\040Discord\040para\040Estado\040de\040Werner}{chapter.8}% 147
+\BOOKMARK [2][-]{subsection.8.24.1}{Discord\040de\040Hellinger}{section.8.24}% 148
+\BOOKMARK [2][-]{subsection.8.24.2}{Comparación gráfica entre Discord de Dakic, de Luo y de Hellinger}{section.8.24}% 149
+\BOOKMARK [1][-]{section.8.25}{Distintos tipos de Discord para Estado Clásico-Cuántico no ortogonal en B}{chapter.8}% 150
+\BOOKMARK [2][-]{subsection.8.25.1}{Discord\040de\040Dakic}{section.8.25}% 151
+\BOOKMARK [2][-]{subsection.8.25.2}{Discord\040de\040Luo}{section.8.25}% 152
+\BOOKMARK [1][-]{section.8.26}{Estimación de un estado desconocido de un qubit}{chapter.8}% 153
+\BOOKMARK [2][-]{subsection.8.26.1}{Estimador\040para\040la\040variable\040desconocida}{section.8.26}% 154
+\BOOKMARK [2][-]{subsection.8.26.2}{Información de Fisher del POVM}{section.8.26}% 155
+\BOOKMARK [2][-]{subsection.8.26.3}{Eficiencia\040del\040Estimador}{section.8.26}% 156
+\BOOKMARK [0][-]{chapter.9}{Métodos Numéricos}{}% 157
+\BOOKMARK [1][-]{section.9.1}{Evolución temporal con Ecuación de Schrodinger}{chapter.9}% 158
+\BOOKMARK [2][-]{subsection.9.1.1}{Forma del operador evolución temporal}{section.9.1}% 159
+\BOOKMARK [2][-]{subsection.9.1.2}{Exponencial\040temporal\040como\040producto\040infinito}{section.9.1}% 160
+\BOOKMARK [2][-]{subsection.9.1.3}{Operador evolución para varios intervalos}{section.9.1}% 161
+\BOOKMARK [2][-]{subsection.9.1.4}{Operador evolución inverso}{section.9.1}% 162
+\BOOKMARK [2][-]{subsection.9.1.5}{Descomposición para Hamiltoniano suma}{section.9.1}% 163
+\BOOKMARK [2][-]{subsection.9.1.6}{Otra descomposición para Hamiltoniano suma}{section.9.1}% 164
+\BOOKMARK [2][-]{subsection.9.1.7}{Evolución con Hamiltoniano transformado}{section.9.1}% 165
+\BOOKMARK [1][-]{section.9.2}{Ecuación Maestra Fenomenológica}{chapter.9}% 166
+\BOOKMARK [2][-]{subsection.9.2.1}{Obtención de operadores de Linblad}{section.9.2}% 167
+\BOOKMARK [2][-]{subsection.9.2.2}{Programación Ecuación Maestra para estados de Bell}{section.9.2}% 168
+\BOOKMARK [2][-]{subsection.9.2.3}{Programación Ecuación Maestra para estados lógicos}{section.9.2}% 169
+\BOOKMARK [1][-]{section.9.3}{Ejercicios\040Suplementarios}{chapter.9}% 170
+\BOOKMARK [2][-]{subsection.9.3.1}{Elementos de Matriz de Ecuación Maestra}{section.9.3}% 171
+\BOOKMARK [2][-]{subsection.9.3.2}{Resultado obtenido de considerar origen de Ecuación Maestra}{section.9.3}% 172
+\BOOKMARK [2][-]{subsection.9.3.3}{Problema\040considerando\040estado\040gato}{section.9.3}% 173
+\BOOKMARK [2][-]{subsection.9.3.4}{Solución considerando Hamiltoniano}{section.9.3}% 174
+\BOOKMARK [1][-]{section.9.4}{Modelo de Jaynes-Cumming con pérdidas}{chapter.9}% 175
+\BOOKMARK [2][-]{subsection.9.4.1}{Teoría Previa}{section.9.4}% 176
+\BOOKMARK [2][-]{subsection.9.4.2}{Modelado\040para\040Temperatura\0400}{section.9.4}% 177
+\BOOKMARK [2][-]{subsection.9.4.3}{Modelo\040para\040Temperatura\0402}{section.9.4}% 178
+\BOOKMARK [2][-]{subsection.9.4.4}{Modelo\040para\040Temperatura\04010}{section.9.4}% 179
+\BOOKMARK [0][-]{appendix.Alph1}{Imágenes resultado del programa de la sección 3.2}{}% 180
+\BOOKMARK [0][-]{appendix.Alph2}{Imágenes resultado del programa de la sección 3.4}{}% 181

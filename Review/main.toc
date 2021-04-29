@@ -1,0 +1,37 @@
+\contentsline {title}{Espectroscopía Óptica Doble Resonante}{1}{section*.2}
+\contentsline {abstract}{Resumen}{1}{section*.1}
+\tocdepth@munge 
+\contentsline {section}{\numberline {}Contents}{1}{section*.3}
+\tocdepth@restore 
+\contentsline {section}{\numberline {I}Bombeo Óptico y Técnicas de doble resonancia.}{1}{section*.4}
+\contentsline {subsection}{\numberline {A}Introducción}{1}{section*.5}
+\contentsline {subsection}{\numberline {B}Fundamentos}{2}{section*.6}
+\contentsline {subsubsection}{\numberline {1}Bombeo Óptico}{2}{section*.7}
+\contentsline {subsubsection}{\numberline {2}Producción de Doble Resonancia}{3}{section*.8}
+\contentsline {subsubsection}{\numberline {3}Doble Resonancia usando Microondas}{3}{section*.9}
+\contentsline {subsubsection}{\numberline {4}Doble Resonancia usando Radiofrecuencia}{4}{section*.10}
+\contentsline {subsubsection}{\numberline {5}Doble Resonancia Óptica-Óptica}{4}{section*.11}
+\contentsline {section}{\numberline {II}Detección Óptica de Resonancia Paramagnética de Electrones}{5}{section*.12}
+\contentsline {subsection}{\numberline {A}Introducción}{5}{section*.13}
+\contentsline {subsection}{\numberline {B}Fundamentos}{5}{section*.14}
+\contentsline {subsubsection}{\numberline {1}Estudio de defectos con alta selectividad}{5}{section*.15}
+\contentsline {subsubsection}{\numberline {2}Absorción y emisión de Excitones}{5}{section*.16}
+\contentsline {subsubsection}{\numberline {3}Aproximación Franck-Condon}{6}{section*.17}
+\contentsline {subsubsection}{\numberline {4}EPR detectada con Dicroísmo Magnético Circular de Método de Absorción}{6}{section*.18}
+\contentsline {subsubsection}{\numberline {5}Reglas de Selección para transiciones dipolares con polarización circular}{7}{section*.19}
+\contentsline {section}{\numberline {III}Sensibilidad en Sistemas de Doble Resonancia}{7}{section*.20}
+\contentsline {subsection}{\numberline {A}Detección de estados fundamental y excitado con Bombeo Óptico}{7}{section*.21}
+\contentsline {subsection}{\numberline {B}Detección de EPR en Luminiscencia de recombinación}{9}{section*.22}
+\contentsline {subsection}{\numberline {C}Detección de EPR de estados triplete}{9}{section*.23}
+\contentsline {subsection}{\numberline {D}Sensibilidad de mediciones de doble resonancia}{10}{section*.24}
+\contentsline {subsection}{\numberline {E}Sensibilidad en Dicroísmo Magnético de Absorción}{10}{section*.25}
+\contentsline {subsection}{\numberline {F}Sensibilidad en EPR ópticamente detectado}{11}{section*.26}
+\contentsline {section}{\numberline {IV}Ejemplos}{12}{section*.27}
+\contentsline {subsection}{\numberline {A}Espectro de Excitación de MCDA de Defecto}{12}{section*.28}
+\contentsline {subsection}{\numberline {B}Medición de Tiempo de Relajación para una red de espínes}{12}{section*.29}
+\contentsline {subsection}{\numberline {C}Determinación de estado de espín}{12}{section*.30}
+\contentsline {subsection}{\numberline {D}Espectroscopía de Estados de Rydberg}{13}{section*.31}
+\contentsline {subsection}{\numberline {E}Bombeo de Emisión Estimulada}{13}{section*.32}
+\contentsline {subsection}{\numberline {F}Etiquetado de Polarización}{14}{section*.33}
+\contentsline {section}{\numberline {V}Agradecimientos}{14}{section*.34}
+\contentsline {section}{\numberline {}Referencias}{14}{section*.35}

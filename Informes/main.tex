@@ -1,0 +1,189 @@
+\documentclass{article}
+\usepackage[margin=1.5in]{geometry} 
+\usepackage[english]{babel}
+\usepackage{amsmath,amsthm,amssymb,hyperref,braket, fontspec,color, sectsty, graphicx, appendix, empheq, subfig}
+\usepackage[dvipsnames]{xcolor}
+\setromanfont[
+BoldFont=QuattrocentoSans-Bold.ttf, 
+ItalicFont=QuattrocentoSans-BoldItalic.ttf,
+BoldItalicFont=QuattrocentoSans-Italic.ttf
+]{QuattrocentoSans-Regular.ttf}
+\setsansfont[
+BoldFont=QuattrocentoSans-Bold.ttf,
+ItalicFont=QuattrocentoSans-BoldItalic.ttf,
+BoldItalicFont=QuattrocentoSans-Italic.ttf
+]{QuattrocentoSans-Regular.ttf}
+\begin{document}
+\large 
+{\Large  \textcolor{Red}{Physics Advanced Topics} }
+\hfill \Large   \textcolor{Red}{Daniel Castillo Castro}
+\begin{center}
+\Large  \textcolor{Red}{Homework 1}
+\end{center}
+\vspace{0.05in}
+\chapterfont{\color{Red}}
+\sectionfont{\color{Red}}
+\subsectionfont{\color{Red}}
+\everymath{\color{blue}}
+\everydisplay{\color{blue}}
+\tableofcontents
+
+\section{Preliminaries}
+\subsection{2 Level System (with pulses)}
+\subsubsection{Hamiltonian under unitary transformation}
+The matrix $H$ written in the $\{\ket{e},\ket{g}\}$ basis (naming $c_x=b_x cos(\omega t)$ and $c_y=b_y cos(\omega t)$, $=1$)
+\begin{equation}\label{eq1}H=\begin{pmatrix} b_x cos(\omega t) \\ b_y cos(\omega t) \\ \gamma B \end{pmatrix}\cdot\vec{\sigma}=\begin{pmatrix}\gamma B & c_x-ic_y\\ c_x+ic_y & -\gamma B \end{pmatrix}\end{equation}
+Is called \textcolor{red}{Hamiltonian} because is present in the Schrodinger equation:
+\begin{equation}\label{eq2}\begin{pmatrix} \ket{\dot{e}}\\ \ket{\dot{g}} \end{pmatrix}= \begin{pmatrix}-i\gamma B & -c_y-ic_x\\ c_y-ic_x & i\gamma B \end{pmatrix}
+\begin{pmatrix} \ket{e}\\ \ket{g} \end{pmatrix}\end{equation}
+Now, for the change of basis:
+\begin{equation}\label{eq3}\begin{pmatrix} \ket{\tilde{e}}\\ \ket{\tilde{g}} \end{pmatrix}= \begin{pmatrix}e^{i\omega t} & 0 \\ 0 & e^{i\omega t}\end{pmatrix}
+\begin{pmatrix} \ket{e}\\ \ket{g} \end{pmatrix}\end{equation}
+The time derivative is, by rule of chain:
+\begin{equation}\label{eq4}\frac{d}{dt} \begin{pmatrix} \ket{\tilde{e}}\\ \ket{\tilde{g}} \end{pmatrix}=(i\omega )\begin{pmatrix} \ket{\tilde{e}}\\ \ket{\tilde{g}} \end{pmatrix}+ e^{i\omega t}\begin{pmatrix} \ket{\dot{e}}\\ \ket{\dot{g}} \end{pmatrix}\end{equation}
+And using the equation \ref{eq2}
+\begin{equation}\label{eq5}\frac{d}{dt}\begin{pmatrix} \ket{\tilde{e}}\\ \ket{\tilde{g}} \end{pmatrix}= (i\omega \mathbb{I}+e^{i\omega t}\begin{pmatrix} -i\gamma B & -c_y-ic_x\\ c_y-ic_x & i\gamma B \end{pmatrix}
+e^{-i\omega t})\begin{pmatrix} \ket{\tilde{e}}\\ \ket{\tilde{g}} \end{pmatrix}\end{equation}
+By the definition of $c_x$ and $c_y$ it appears a product between $cos(\omega t)$ and $e^{-i\omega}$ that can be approximated if rapidly oscillating terms are neglected:
+\begin{equation}\label{eq6}cos(\omega t)e^{-i\omega t}=\frac{(e^{i\omega t}+e^{-i\omega t})e^{-i\omega t}}{2}=\frac{1+e^{-2i\omega t}}{2}\simeq \frac{1}{2}\end{equation}
+Defining $c_\pm=c_x\pm ic_y$, the approximation of \ref{eq6} makes it:
+\begin{equation}\label{eq7}c_\pm e^{-i\omega t}=(c_x\pm ic_y)e^{-i\omega t}=(b_x\pm ib_y)cos(\omega t)e^{-i\omega t}\simeq \frac{b_x\pm  i b_y}{2}\end{equation}
+Using \ref{eq7}, \ref{eq5} can be simplified:
+\begin{equation}\label{eq8}\frac{d}{dt}\begin{pmatrix} \ket{\tilde{e}}\\ \ket{\tilde{g}} \end{pmatrix}= \begin{pmatrix} -i(\gamma B-\omega) & -ie^{i\omega t}\frac{b_-}{2}\\ -ie^{i\omega t}\frac{b_+}{2} & i(\gamma B-\omega) \end{pmatrix}\begin{pmatrix} \ket{\tilde{e}}\\ \ket{\tilde{g}} \end{pmatrix}\end{equation}
+And finally, defining $B_x=\frac{e^{i\omega t}b_-}{2}$ and $B_y=\frac{e^{i\omega}b_+}{2}$, the hamiltonian for the $\{\ket{\tilde{e}},\ket{\tilde{g}}\}$ basis is ($\Delta=\gamma B-\omega$, $B_\pm=B_x\pm iB_y$)
+\begin{equation}\label{eq9}H=\begin{pmatrix} B_x \\ B_y \\ \Delta \end{pmatrix}\cdot\vec{\sigma}=\begin{pmatrix}\Delta & B_- \\ B_+ & -\Delta \end{pmatrix}\end{equation}
+\subsubsection{Time evolution for the excited state}
+The matrix of \ref{eq9} can be splitted into 2 operators ($r^2=\Delta^2+B_x^2+B_y^2$):
+\begin{equation}\label{eq10}H=\frac{1}{2}\begin{pmatrix} \Delta+r & B_- \\ B_+ & r-\Delta \end{pmatrix}-\frac{1}{2}\begin{pmatrix} r-\Delta & -B_- \\ -B_+ & \Delta+r\end{pmatrix}\end{equation}
+The both operators \textcolor{red}{are projectors} for orthogonal states:
+\begin{equation}\label{eq11}\begin{aligned}
+\frac{1}{2}\begin{pmatrix} \Delta+r & B_- \\ B_+ & r-\Delta \end{pmatrix} 
+\textcolor{red}{\Rightarrow}v_+= \frac{1}{\sqrt{2}}\begin{pmatrix}\sqrt{\Delta+r}\\ \frac{B_+}{\sqrt{\Delta+r}} \end{pmatrix}\\ 
+\frac{1}{2}\begin{pmatrix} r-\Delta & -B_-  \\ -B_+& \Delta+r\end{pmatrix}\textcolor{red}{\Rightarrow}v_-=\frac{1}{\sqrt{2}}\begin{pmatrix}\frac{-B_-}{\sqrt{\Delta+r}} \\ \sqrt{\Delta+r} \end{pmatrix}
+\end{aligned}\end{equation}
+Therefore, it was obtained a \textcolor{red}{Spectral Decomposition} for $H$
+\begin{equation}\label{eq12} H=v_+v_+^\dag-v_-v_-^\dag\end{equation}
+So, the evolution operator $e^{iHt}$ for the system is ($\hslash=1$)
+\begin{equation}\label{eq13}e^{-it}v_+v_+^\dag+e^{it}v_-v_-^\dag =\begin{pmatrix}rcos(t)-i\Delta sin(t)& -iB_- sin(t)\\ iB_+ sin(t) &rcos(t)+i\Delta sin(t)\end{pmatrix}\end{equation}
+If the initial condition is:
+\begin{equation}\label{eq14}\ket{\phi(0)}= \ket{\tilde{e}}=\begin{pmatrix}1\\0\end{pmatrix}\end{equation}
+The state after time evolution is:
+\begin{equation}\label{eq15}\ket{\phi(t)}=e^{-iHt}\ket{\phi(0)}=\begin{pmatrix} rcos(t)-i\Delta sin(t) \\ iB_+ sin(t)\end{pmatrix}\end{equation}
+\subsubsection{Can the evolution to reach the ground state?}
+With the definition given in \ref{eq15}, it can be answered this question. If in a given time $\ket{\tilde{\phi(t)}}=\ket{g}$ this implies that $\bra{g}\ket{\phi(t)}=1$:
+\begin{equation}\label{eq16}B_+B_- sin^2(t)=1 \textcolor{red}{\Rightarrow} sin^2(t)=\frac{1}{B_+B_-} \end{equation}
+Using that $cos^2(t)=1-sin^2(t)$ and \ref{eq16}, it can be write down the another condition: $\bra{e}\ket{\phi(t)}=0$
+\begin{equation}\label{eq17} r^2 cos^2(t)+\Delta^2 sin^2(t)=0 \textcolor{red}{\Rightarrow}r^2(1-\frac{1}{B_+B_-})+\frac{\Delta^2}{B_+B_-}=0\end{equation}
+If $r^2=\Delta^2+B_+B_-$, the numerator \ref{eq17} gives the condition:
+\begin{equation}\label{eq18}r^2 B_+B_--r^2+\Delta^2=0 \textcolor{red}{\Rightarrow} (r^2-1)B_+B_-=0 \textcolor{red}{\Rightarrow} r^2= 1\end{equation}
+So, for the ground state can be reached, it must needed \begin{equation}\label{eq19}r^2=\Delta^2+B_+B_-=(\gamma B-\omega)+\frac{b_x^2+b_y^2}{4}=1\end{equation}
+\subsection{Time Evolution in Two Level System}
+For the next Hamiltonian ($\lvert n\rvert^2=n_x^2+n_y^2+n_z^2=1$):
+\begin{equation}\label{eq20}H=\gamma B\hat{n}\cdot\vec{\sigma}=\begin{pmatrix} \gamma B n_z & \gamma B (n_x-in_y)\\ \gamma B (n_x+in_y)& -\gamma B n_z \end{pmatrix}\end{equation}
+The procedure done in \ref{eq10} can be done two, finding $H$ as a sum of 2 proyectors, and by the way, it spectral decomposition:
+\begin{equation}\label{eq21}H=\frac{\gamma B}{2}[\begin{pmatrix}1+n_z& n_x-in_y\\n_x+in_y &1-n_z\end{pmatrix}-\begin{pmatrix}1-n_z&-n_x+in_y\\-n_x-in_y&1+n_z\end{pmatrix}]\end{equation}
+Using it, it can be found the evolution operator, that has the same form of the found in \ref{eq13} ($n_\pm=n_x\pm in_y$):
+\begin{equation}\label{eq22}e^{-iH\tau}=\begin{pmatrix} cos(\frac{\gamma B\tau}{2})-in_z sin(\frac{\gamma B \tau}{2})& -in_-sin(\frac{\gamma B \tau}{2}) \\ i n_+ sin(\frac{\gamma B \tau}{2}) & cos(\frac{\gamma B \tau}{2})+i n_z sin(\frac{\gamma B \tau}{2}) \end{pmatrix}\end{equation}
+Defining $\theta=\gamma b \tau$, the evolution operator can be understood as a rotating operator:
+\begin{equation}\label{eq23} e^{-iH\tau}=\begin{pmatrix} cos(\frac{\theta}{2})-in_z sin(\frac{\theta}{2})& -in_-sin(\frac{\theta}{2}) \\ in_+sin(\frac{\theta}{2}) & cos(\frac{\theta}{2})+i n_z sin(\frac{\theta}{2}) \end{pmatrix}\end{equation}
+The operator of \ref{eq23} will be analised the next special cases:
+\begin{itemize}
+    \item If $\hat{n}=\hat{x}$, $n_x=1,n_y=n_z=0$, \ref{eq23} becomes 
+    \begin{equation}\label{eq24}e^{-iH\tau}=\begin{pmatrix} cos(\frac{\theta}{2})& -isin(\frac{\theta}{2}) \\ isin(\frac{\theta}{2}) & cos(\frac{\theta}{2})\end{pmatrix}\end{equation}
+    \item If $\hat{n}=\hat{y}$, $n_y=1,n_z=n_x=0$, \ref{eq23} becomes
+    \begin{equation}\label{eq25}e^{-iH\tau}=\begin{pmatrix} cos(\frac{\theta}{2})& -sin(\frac{\theta}{2}) \\ sin(\frac{\theta}{2}) & cos(\frac{\theta}{2})\end{pmatrix}\end{equation}
+    \item If $\hat{n}=\hat{z}$, $n_z=1,n_x=n_y=0$, \ref{eq23} becomes 
+    \begin{equation}\label{eq26}e^{-iH\tau}=\begin{pmatrix} cos(\frac{\theta}{2})-i sin(\frac{\theta}{2})& 0 \\ 0 & cos(\frac{\theta}{2})+i sin(\frac{\theta}{2}) \end{pmatrix}\end{equation}
+\end{itemize}
+And replacing for $\theta=\frac{\pi}{2}$ and $\theta=\pi$, it will be obtained the next tables for $\ket{\phi_0}=\ket{e}$ and $\ket{\phi_0}=\ket{g}$:
+\begin{center}
+\begin{table}[h]
+\resizebox{\textwidth}{!}{
+\begin{tabular}{lllll}
+ $\ket{\phi(0)}=\ket{e}$ & $\hat{n}=\hat{x}$ & $\hat{n}=\hat{y}$ & $\hat{n}=\hat{z}$ \\
+ $\theta=\frac{\pi}{2}$ & $\ket{\phi(t)}=\frac{\ket{e}+i\ket{g}}{\sqrt{2}}$ & $\ket{\phi(t)}=\frac{\ket{e}+\ket{g}}{\sqrt{2}}$ & $\ket{\phi(t)}=\frac{1-i}{\sqrt{2}}\ket{e}$ \\
+ $\theta=\pi$ & $\ket{\phi(t)}=i\ket{g}$ & $\ket{\phi(t)}=\ket{g}$ & $\ket{\phi(t)}=-i\ket{e}$
+\end{tabular}}
+\end{table}
+\end{center}
+
+\begin{center}
+\begin{table}[h]
+\resizebox{\textwidth}{!}{
+\begin{tabular}{lllll}
+ $\ket{\phi(0)}=\ket{g}$ & $\hat{n}=\hat{x}$ & $\hat{n}=\hat{y}$ & $\hat{n}=\hat{z}$ \\
+ $\theta=\frac{\pi}{2}$ & $\ket{\phi(t)}=\frac{\ket{g}-i\ket{e}}{\sqrt{2}}$ & $\ket{\phi(t)}=\frac{\ket{g}-\ket{e}}{\sqrt{2}}$ & $\ket{\phi(t)}=\frac{1+i}{\sqrt{2}}\ket{g}$ \\
+ $\theta=\pi$ & $\ket{\phi(t)}=-i\ket{e}$ & $\ket{\phi(t)}=-\ket{e}$ & $\ket{\phi(t)}=i\ket{g}$
+\end{tabular}}
+\end{table}
+\end{center}
+
+
+\subsection{Final State after Sequences}
+For an initial state ($\lvert\alpha\rvert^2+\lvert\beta\rvert^2=1$):
+\begin{equation}\label{eq27}\ket{\varphi_0}=\alpha\ket{e}+\beta\ket{g} =\begin{pmatrix}\alpha \\ \beta \end{pmatrix}\end{equation}
+It can be done a Ramsey Sequence ($\varphi=\frac{\gamma B\tau}{2}$)
+\begin{equation}\label{eq28}\begin{aligned}
+(\frac{\pi}{2}_x):\begin{pmatrix}\alpha \\\beta  \end{pmatrix}\textcolor{red}{\rightarrow}\begin{pmatrix}\frac{\alpha+i\beta}{\sqrt{2}} \\ \frac{\beta-i\alpha}{\sqrt{2}} \end{pmatrix}\\
+(\tau):\begin{pmatrix}\frac{\alpha+i\beta}{\sqrt{2}}\\ \frac{\beta-i\alpha}{\sqrt{2}} \end{pmatrix}\textcolor{red}{\rightarrow}\begin{pmatrix}\frac{(cos\varphi-in_zsin\varphi)(\alpha+i\beta)-in_-sin\varphi(\beta-i\alpha)}{\sqrt{2}}\\\frac{in_+sin\varphi(\alpha+i\beta)+(cos\varphi+in_zsin\varphi)(\beta-i\alpha)}{\sqrt{2}} \end{pmatrix}\\
+(\frac{\pi}{2}_x):\begin{pmatrix}\frac{(cos\varphi-isin\varphi)(\alpha+i\beta)}{\sqrt{2}}\\\frac{(cos\varphi+isin\varphi)(\beta-i\alpha)}{\sqrt{2}} \end{pmatrix}\textcolor{red}{\rightarrow}
+\begin{pmatrix} \frac{e^{-i\varphi}(\alpha+i\beta)+ie^{i\varphi}(\beta-i\alpha)}{2}\\ \frac{e^{i\varphi}(\beta-i\alpha)-ie^{-i\varphi}(\alpha+i\beta)}{2}\end{pmatrix} \end{aligned}\end{equation}
+It can be done a kind of Echo Sequence ($\varphi=\frac{\gamma B\tau}{2}$)
+\begin{equation}\label{eq29}\begin{aligned}
+(\frac{\pi}{2}_x):\begin{pmatrix}\alpha \\\beta  \end{pmatrix}\textcolor{red}{\rightarrow}\begin{pmatrix}\frac{\alpha+i\beta}{\sqrt{2}} \\ \frac{\beta-i\alpha}{\sqrt{2}} \end{pmatrix}\\
+(\tau):\begin{pmatrix}\frac{\alpha+i\beta}{\sqrt{2}}\\ \frac{\beta-i\alpha}{\sqrt{2}} \end{pmatrix}\textcolor{red}{\rightarrow}\begin{pmatrix}\frac{(cos\varphi-in_zsin\varphi)(\alpha+i\beta)-in_-sin\varphi(\beta-i\alpha)}{\sqrt{2}}\\\frac{in_+sin\varphi(\alpha+i\beta)+(cos\varphi+in_zsin\varphi)(\beta-i\alpha)}{\sqrt{2}} \end{pmatrix}\\
+(\pi_x):\begin{pmatrix}\frac{(cos\varphi-isin\varphi)(\alpha+i\beta)}{\sqrt{2}}\\\frac{(cos\varphi+isin\varphi)(\beta-i\alpha)}{\sqrt{2}} \end{pmatrix}\textcolor{red}{\rightarrow}\begin{pmatrix}-ie^{i\varphi}(\frac{\beta-i\alpha}{\sqrt{2}})\\ie^{-i\varphi}(\frac{\alpha+i\beta}{\sqrt{2}}) \end{pmatrix}\\
+(\tau):\begin{pmatrix}-e^{i\varphi}(\frac{\alpha+i\beta}{\sqrt{2}})\\ -e^{-i\varphi}(\frac{\beta-i\alpha}{\sqrt{2}}) \end{pmatrix}\textcolor{red}{\rightarrow}\begin{pmatrix} -e^{-i\varphi}e^{i\varphi}\frac{\alpha+i\beta}{\sqrt{2}}\\ -e^{i\varphi}e^{-i\varphi}\frac{\beta-i\alpha}{\sqrt{2}} \end{pmatrix}\\
+(\frac{\pi}{2}_x):\begin{pmatrix}-\frac{\alpha+i\beta}{\sqrt{2}}\\-\frac{\beta-i\alpha}{\sqrt{2}} \end{pmatrix}\textcolor{red}{\rightarrow}\begin{pmatrix}\frac{-(\alpha+i\beta+i(\beta-i\alpha))}{2} \\ \frac{-(\beta-i\alpha-i(\alpha+i\beta))}{2} \end{pmatrix}
+\end{aligned}\end{equation}
+It can be done another kind of Echo Sequence ($\varphi=\frac{\gamma B\tau}{2}$)
+\begin{equation}\label{eq30}\begin{aligned}
+(\frac{\pi}{2}_x):\begin{pmatrix}\alpha \\\beta  \end{pmatrix}\textcolor{red}{\rightarrow}\begin{pmatrix}\frac{\alpha+i\beta}{\sqrt{2}} \\ \frac{\beta-i\alpha}{\sqrt{2}} \end{pmatrix}\\
+(\tau):\begin{pmatrix}\frac{\alpha+i\beta}{\sqrt{2}}\\ \frac{\beta-i\alpha}{\sqrt{2}} \end{pmatrix}\textcolor{red}{\rightarrow}\begin{pmatrix}\frac{(cos\varphi-in_zsin\varphi)(\alpha+i\beta)-in_-sin\varphi(\beta-i\alpha)}{\sqrt{2}}\\\frac{in_+sin\varphi(\alpha+i\beta)+(cos\varphi+in_zsin\varphi)(\beta-i\alpha)}{\sqrt{2}} \end{pmatrix}\\
+(\pi_x):\begin{pmatrix}\frac{(cos\varphi-isin\varphi)(\alpha+i\beta)}{\sqrt{2}}\\\frac{(cos\varphi+isin\varphi)(\beta-i\alpha)}{\sqrt{2}} \end{pmatrix}\textcolor{red}{\rightarrow}\begin{pmatrix}-ie^{i\varphi}(\frac{\beta-i\alpha}{\sqrt{2}})\\ie^{-i\varphi}(\frac{\alpha+i\beta}{\sqrt{2}}) \end{pmatrix}\\
+(\tau):\begin{pmatrix}-e^{i\varphi}(\frac{\alpha+i\beta}{\sqrt{2}})\\ -e^{-i\varphi}(\frac{\beta-i\alpha}{\sqrt{2}}) \end{pmatrix}\textcolor{red}{\rightarrow}\begin{pmatrix} -e^{-i\varphi}e^{i\varphi}\frac{\alpha+i\beta}{\sqrt{2}}\\ -e^{i\varphi}e^{-i\varphi}\frac{\beta-i\alpha}{\sqrt{2}} \end{pmatrix}\\
+(\frac{\pi}{2}_y):\begin{pmatrix}-\frac{\alpha+i\beta}{\sqrt{2}}\\-\frac{\beta-i\alpha}{\sqrt{2}} \end{pmatrix}\textcolor{red}{\rightarrow}\begin{pmatrix}\frac{-(\alpha+i\beta+\beta-i\alpha)}{2} \\ \frac{-(\beta-i\alpha-\alpha-i\beta)}{2} \end{pmatrix}
+\end{aligned}\end{equation}
+In the processes \ref{eq28}, \ref{eq29} and \ref{eq30}, the operators were applicated and in the next step, is simplified the result state. Therefore, The final and normalised vectors after the processes are:
+\begin{equation}\label{eq31}\begin{aligned}\ket{\phi}_{Ramsey}=\frac{1}{\sqrt{2}}\begin{pmatrix}\alpha+i\beta\\\beta-i\alpha  \end{pmatrix}=\frac{1}{\sqrt{2}}\begin{pmatrix}\alpha\\ \beta\end{pmatrix}+\frac{i}{\sqrt{2}}\begin{pmatrix}\beta \\ -\alpha\end{pmatrix}\\ \ket{\phi}_{Echo 1}= \begin{pmatrix} \frac{-\alpha-i\beta}{\sqrt{2}} \\ \frac{-\beta+i\alpha}{\sqrt{2}} \end{pmatrix}=\frac{-1}{\sqrt{2}}\begin{pmatrix}\alpha\\ \beta\end{pmatrix}+\frac{-i}{\sqrt{2}}\begin{pmatrix}\beta \\ -\alpha\end{pmatrix}\\ \ket{\phi}_{Echo 2}= \begin{pmatrix} \frac{(\alpha+i\beta)(i-1)}{2}\\\frac{(\beta-i\alpha)(i-1)}{2} \end{pmatrix}=\frac{i-1}{2}\begin{pmatrix}\alpha\\ \beta\end{pmatrix}+\frac{-1-i}{2}\begin{pmatrix}\beta \\-\alpha\end{pmatrix}\end{aligned}\end{equation}
+For the 3 vectors, the probability to obtain again the initial state of \ref{eq27} can be obtained by the splitting made in \ref{eq31} for each one of them. The probabilities will be:
+\begin{equation}\label{eq32}\begin{aligned}P_{0, Ramsey}=(\frac{1}{\sqrt{2}})^2=\frac{1}{2}\\P_{0,Echo1}=(\frac{-1}{\sqrt{2}})^2=\frac{1}{2}\\P_{0,Echo2}=\rvert\frac{i-1}{2}\lvert^2=(\frac{\sqrt{2}}{2})^2=\frac{1}{2}\end{aligned}\end{equation}
+\section{Central Spin and Random Fluctuating Field}
+In the suggested problem (spin $\frac{1}{2}$ under a magnetic field $B_0$, is valid a Hamiltonian similar to the defined in \ref{eq20}. If the rotating frame is along the $\hat{z}$ axis, $n_z=1$ and $n_x=n_y=0$:
+\begin{equation}\label{eq33}H=\gamma B\hat\sigma_z=\begin{pmatrix} \gamma B & 0\\ 0& -\gamma B  \end{pmatrix}\end{equation}
+The evolution operator derived by \ref{eq33} is
+\begin{equation}\label{eq34}e^{-iH\tau}=\begin{pmatrix} cos(\frac{\gamma B\tau}{2})-isin(\frac{\gamma B \tau}{2})& 0\\ 0 & cos(\frac{\gamma B \tau}{2})+i sin(\frac{\gamma B \tau}{2}) \end{pmatrix}\end{equation}
+\subsection{Static Magnetic Field} The both analysis are made an initial state given by \ref{eq27} and the tables developed in a previous section:
+\subsubsection{State after Ramsey sequence}
+As it has done in \ref{eq28}, it is made a Ramsey Sequence, now with the Hamiltonian of \ref{eq34}:
+\begin{equation}\label{eq35}\begin{aligned}
+(\frac{\pi}{2}_x):\begin{pmatrix}\alpha \\\beta  \end{pmatrix}\textcolor{red}{\rightarrow}\begin{pmatrix}\frac{\alpha+i\beta}{\sqrt{2}} \\ \frac{\beta-i\alpha}{\sqrt{2}} \end{pmatrix}\\
+(\tau):\begin{pmatrix}\frac{\alpha+i\beta}{\sqrt{2}}\\ \frac{\beta-i\alpha}{\sqrt{2}} \end{pmatrix}\textcolor{red}{\rightarrow}\begin{pmatrix}\frac{(cos\varphi-isin\varphi)(\alpha+i\beta)}{\sqrt{2}}\\\frac{(cos\varphi+isin\varphi)(\beta-i\alpha)}{\sqrt{2}} \end{pmatrix}\\
+(\frac{\pi}{2}_x):\begin{pmatrix}\frac{e^{-i\varphi}(\alpha+i\beta)}{\sqrt{2}}\\\frac{e^{i\varphi}(\beta-i\alpha)}{\sqrt{2}} \end{pmatrix}\textcolor{red}{\rightarrow}
+\begin{pmatrix} \frac{e^{-i\varphi}(\alpha+i\beta)+ie^{i\varphi}(\beta-i\alpha)}{2}\\ \frac{e^{i\varphi}(\beta-i\alpha)-ie^{-i\varphi}(\alpha+i\beta)}{2}\end{pmatrix} \end{aligned}\end{equation}
+Such that the final state is:
+\begin{equation}\label{eq36}\ket{\phi(\tau)}=\frac{1}{\sqrt{2}}\begin{pmatrix} \alpha+i\beta \\ \beta-i\alpha \end{pmatrix}=\frac{1}{\sqrt{2}}\begin{pmatrix}\alpha \\ \beta\end{pmatrix}+\frac{i}{\sqrt{2}}\begin{pmatrix}\beta\\ -\alpha\end{pmatrix}\end{equation}
+And the probability to be in the initial state is:
+\begin{equation}\label{eq37}P_0=(\frac{1}{\sqrt{2}})^2=\frac{1}{2}\end{equation}
+\subsubsection{State after Echo sequence}
+As it has done in \ref{eq29}, it is made a Echo Sequence, now with the Hamiltonian of \ref{eq34}:
+\begin{equation}\label{eq38}\begin{aligned}
+(\frac{\pi}{2}_x):\begin{pmatrix}\alpha \\\beta  \end{pmatrix}\textcolor{red}{\rightarrow}\begin{pmatrix}\frac{\alpha+i\beta}{\sqrt{2}} \\ \frac{\beta-i\alpha}{\sqrt{2}} \end{pmatrix}\\
+(\tau):\begin{pmatrix}\frac{\alpha+i\beta}{\sqrt{2}}\\ \frac{\beta-i\alpha}{\sqrt{2}} \end{pmatrix}\textcolor{red}{\rightarrow}\begin{pmatrix}\frac{(cos\varphi-isin\varphi)(\alpha+i\beta)}{\sqrt{2}}\\\frac{(cos\varphi+isin\varphi)(\beta-i\alpha)}{\sqrt{2}} \end{pmatrix}\\
+(\pi_x):\begin{pmatrix}\frac{e^{-i\varphi}(\alpha+i\beta)}{\sqrt{2}}\\\frac{e^{i\varphi}(\beta-i\alpha)}{\sqrt{2}} \end{pmatrix}\textcolor{red}{\rightarrow}\begin{pmatrix}-ie^{i\varphi}(\frac{\beta-i\alpha}{\sqrt{2}})\\ie^{-i\varphi}(\frac{\alpha+i\beta}{\sqrt{2}}) \end{pmatrix}\\
+(\tau):\begin{pmatrix}-e^{i\varphi}(\frac{\alpha+i\beta}{\sqrt{2}})\\ -e^{-i\varphi}(\frac{\beta-i\alpha}{\sqrt{2}}) \end{pmatrix}\textcolor{red}{\rightarrow}\begin{pmatrix} -e^{-i\varphi}e^{i\varphi}\frac{\alpha+i\beta}{\sqrt{2}}\\ -e^{i\varphi}e^{-i\varphi}\frac{\beta-i\alpha}{\sqrt{2}} \end{pmatrix}\\
+(\frac{\pi}{2}_x):\begin{pmatrix}-\frac{\alpha+i\beta}{\sqrt{2}}\\-\frac{\beta-i\alpha}{\sqrt{2}} \end{pmatrix}\textcolor{red}{\rightarrow}\begin{pmatrix}\frac{-(\alpha+i\beta+i(\beta-i\alpha))}{2} \\ \frac{-(\beta-i\alpha-i(\alpha+i\beta))}{2} \end{pmatrix}
+\end{aligned}\end{equation}
+Such that the final state is:
+\begin{equation}\label{eq39}\ket{\phi(\tau)}=\frac{1}{\sqrt{2}}\begin{pmatrix} -\alpha-i\beta \\ -\beta+i\alpha \end{pmatrix}=\frac{-1}{\sqrt{2}}\begin{pmatrix}\alpha \\ \beta\end{pmatrix}+\frac{-i}{\sqrt{2}}\begin{pmatrix}\beta\\ -\alpha\end{pmatrix}\end{equation}
+And the probability to be in the initial state is the same that the obtained in \ref{eq37}, that is $P_0=\frac{1}{2}$.
+\subsection{Static and Random Magnetic Fields}
+If it is added a random element in the Magnetic Field, it will be observed more effects. Making a Taylor expansion for the exponential function:
+\begin{equation}\label{eq40}e^{i\phi}\simeq 1+i\phi-\phi^2+...\end{equation}
+It can be obtained by this the expectation value, if as usual $<\phi>=0$
+\begin{equation}\label{eq41}<e^{i\phi}>=1-<\phi>^2\end{equation}
+\subsubsection{Expectation Value of Random Function}
+\subsubsection{Spectral Densities for Different Noises}
+\subsubsection{Ramsey sequence for noisey system}
+\subsubsection{Echo sequence for noisey system}
+\end{document}   
